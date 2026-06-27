@@ -1,0 +1,39 @@
+// Breakpoints (Bootstrap-aligned)
+$bp-xs: 480px;
+$bp-sm: 576px;
+$bp-md: 768px;
+$bp-lg: 992px;
+$bp-xl: 1200px;
+$bp-xxl: 1400px;
+
+@mixin down($width) {
+  @media (max-width: $width) {
+    @content;
+  }
+}
+
+@mixin up($width) {
+  @media (min-width: $width) {
+    @content;
+  }
+}
+
+@mixin between($min, $max) {
+  @media (min-width: $min) and (max-width: $max) {
+    @content;
+  }
+}
+
+// Touch / coarse pointer devices
+@mixin touch {
+  @media (hover: none), (pointer: coarse) {
+    @content;
+  }
+}
+
+// Reduced motion preference
+@mixin reduced-motion {
+  @media (prefers-reduced-motion: reduce) {
+    @content;
+  }
+}

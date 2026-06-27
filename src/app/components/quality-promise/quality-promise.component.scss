@@ -1,0 +1,139 @@
+@use '../../../styles/responsive' as *;
+
+.quality {
+  padding: var(--section-pad) var(--container-pad);
+  background: var(--navy-deep);
+}
+
+.quality__inner {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: clamp(28px, 4vw, 56px) clamp(20px, 4vw, 64px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  @include up(768px) {
+    flex-direction: row;
+    align-items: center;
+    gap: 48px;
+    text-align: left;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--emerald), var(--gold));
+  }
+}
+
+.quality__shield {
+  flex-shrink: 0;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  @include up(768px) {
+    width: 120px;
+    height: 120px;
+  }
+
+  i {
+    font-size: clamp(2.5rem, 8vw, 4rem);
+    color: var(--emerald);
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.quality__shield-ring {
+  position: absolute;
+  inset: 0;
+  border: 2px solid rgba(27, 169, 127, 0.3);
+  border-radius: 50%;
+}
+
+.quality__content {
+  flex: 1;
+  min-width: 0;
+}
+
+.quality__text {
+  max-width: none;
+  margin-bottom: 20px;
+}
+
+.quality__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+
+  @include up(768px) {
+    justify-content: flex-start;
+  }
+}
+
+.quality__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 4px;
+  font-size: clamp(0.7rem, 2vw, 0.78rem);
+  color: var(--gold);
+
+  i {
+    font-size: 0.6rem;
+  }
+}
+
+@include up(992px) {
+  .quality__shield i {
+    animation: shieldPulse 3s ease-in-out infinite;
+  }
+  .quality__shield-ring {
+    animation: ringExpand 3s ease-in-out infinite;
+  }
+}
+
+@keyframes shieldPulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes ringExpand {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.2;
+  }
+}
+
+@include reduced-motion {
+  .quality__shield i,
+  .quality__shield-ring {
+    animation: none !important;
+  }
+}
