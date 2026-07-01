@@ -6,7 +6,7 @@ import { Component, HostListener, OnDestroy, signal } from '@angular/core';
   template: `
     <nav class="navbar-wmp" [class.navbar-wmp--scrolled]="scrolled()" [class.navbar-wmp--open]="menuOpen()">
       <a href="#hero" class="navbar-wmp__logo" (click)="closeMenu()">
-        <img src="icon2.png" alt="Well Med Pharma" class="navbar-wmp__logo-image" />
+        <img src="/icon3.png" alt="Well Med Pharma" class="navbar-wmp__logo-image" />
         <span class="navbar-wmp__logo-text">Well<span>Med</span> Pharma</span>
       </a>
 

@@ -275,11 +275,11 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 12px;
-  border-radius: 28px;
-  background: rgba(255, 255, 255, 0.95);
-  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.28);
-  border: 1px solid rgba(255, 255, 255, 0.28);
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  border: none;
 }
 .hero-visual__image {
   width: clamp(116px, 50%, 156px);

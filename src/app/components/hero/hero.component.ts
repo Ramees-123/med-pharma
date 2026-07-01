@@ -77,7 +77,7 @@ import { CONTACT } from '../../core/data/site-data';
             <div class="hero-visual__ring hero-visual__ring--3"></div>
             <div class="hero-visual__center">
               <div class="hero-visual__badge">
-                <img src="icon2.png" alt="Well Med Pharma" class="hero-visual__image" />
+                <img src="/icon3.png" alt="Well Med Pharma" class="hero-visual__image" />
               </div>
               <div class="hero-visual__label">Well Med Pharma</div>
               <div class="hero-visual__sub">Trusted · Quality · Care</div>
