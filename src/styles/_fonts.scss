@@ -1,0 +1,21 @@
+// Forma DJR Banner Black — display font for numbers & stats
+// Self-hosted: place FormaDJRBanner-Black.woff2 in public/fonts/
+// Adobe Fonts: add your kit link in index.html and use family "forma-djr-banner"
+@font-face {
+  font-family: 'Forma DJR Banner';
+  src:
+    local('Forma DJR Banner Black'),
+    local('FormaDJRBanner-Black'),
+    url('/fonts/FormaDJRBanner-Black.woff2') format('woff2'),
+    url('/fonts/FormaDJRBanner-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+.font-num {
+  font-family: var(--font-num);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  font-variant-numeric: lining-nums;
+}

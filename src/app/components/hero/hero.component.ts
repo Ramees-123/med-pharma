@@ -38,7 +38,7 @@ import { CONTACT } from '../../core/data/site-data';
 
           <p class="hero-sub">
             Trusted Medicines. Healthier Lives. Premium Care.<br />
-            Delivering genuine pharmaceutical products across India and the UAE.
+            Delivering genuine pharmaceutical products across India, GCC countries, the UK, the USA, Australia, and Ireland.
           </p>
 
           <div class="hero-actions">
@@ -76,7 +76,9 @@ import { CONTACT } from '../../core/data/site-data';
             <div class="hero-visual__ring hero-visual__ring--2"></div>
             <div class="hero-visual__ring hero-visual__ring--3"></div>
             <div class="hero-visual__center">
-              <div class="hero-visual__icon"><i class="fas fa-heartbeat"></i></div>
+              <div class="hero-visual__badge">
+                <img src="icon2.png" alt="Well Med Pharma" class="hero-visual__image" />
+              </div>
               <div class="hero-visual__label">Well Med Pharma</div>
               <div class="hero-visual__sub">Trusted · Quality · Care</div>
             </div>
@@ -90,7 +92,7 @@ import { CONTACT } from '../../core/data/site-data';
           <i class="fas fa-location-dot"></i>
           <span>Edavanna, Malappuram, Kerala</span>
         </a>
-        <a href="tel:+919633875445" class="hero__contact-item">
+        <a [href]="'tel:' + contact.phoneIndia" class="hero__contact-item">
           <i class="fas fa-phone"></i>
           <span>{{ contact.phoneIndia }}</span>
         </a>
@@ -102,9 +104,9 @@ import { CONTACT } from '../../core/data/site-data';
           <i class="fas fa-envelope"></i>
           <span>info.wellmedpharma@gmail.com</span>
         </a>
-        <a href="tel:+971552986446" class="hero__contact-item">
-          <i class="fas fa-earth-europe"></i>
-          <span>UAE {{ contact.phoneUae }}</span>
+        <a [href]="contact.whatsappUaeLink" class="hero__contact-item" target="_blank" rel="noopener">
+          <i class="fab fa-whatsapp"></i>
+          <span>WhatsApp UAE {{ contact.phoneUae }}</span>
         </a>
       </div>
 

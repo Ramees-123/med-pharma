@@ -3,6 +3,7 @@ export interface Service {
   icon: string;
   title: string;
   description: string;
+  anchorId: string;
 }
 
 export interface ProcessStep {
@@ -43,6 +44,7 @@ export const SERVICES: Service[] = [
     title: 'Prescription Medicines',
     description:
       'Genuine, licensed prescription drugs sourced directly from certified manufacturers. Accuracy and authenticity guaranteed.',
+    anchorId: 'prescription-medicines',
   },
   {
     num: '02',
@@ -50,6 +52,7 @@ export const SERVICES: Service[] = [
     title: 'Healthcare Products',
     description:
       'A comprehensive range of OTC health and wellness products — vitamins, supplements, diagnostics, and personal care.',
+    anchorId: 'healthcare-products',
   },
   {
     num: '03',
@@ -57,6 +60,7 @@ export const SERVICES: Service[] = [
     title: 'Wellness Solutions',
     description:
       'Holistic wellness products that go beyond medicine — supporting long-term health, prevention, and vitality.',
+    anchorId: 'wellness-solutions',
   },
   {
     num: '04',
@@ -64,6 +68,7 @@ export const SERVICES: Service[] = [
     title: 'Medical Supplies',
     description:
       'Surgical instruments, disposables, diagnostic tools, and hospital-grade consumables for clinics and healthcare providers.',
+    anchorId: 'medical-supplies',
   },
   {
     num: '05',
@@ -71,6 +76,7 @@ export const SERVICES: Service[] = [
     title: 'Bulk Orders',
     description:
       'Tailored bulk supply solutions for hospitals, clinics, pharmacies, and institutional buyers. Competitive pricing, no compromise on quality.',
+    anchorId: 'bulk-orders',
   },
   {
     num: '06',
@@ -78,6 +84,7 @@ export const SERVICES: Service[] = [
     title: 'Customer Support',
     description:
       'Dedicated, multilingual support via phone, email, and WhatsApp. We stay with you from inquiry to delivery and beyond.',
+    anchorId: 'customer-support',
   },
 ];
 
@@ -149,7 +156,7 @@ export const WHY_CARDS: WhyCard[] = [
     icon: 'fa-earth-asia',
     title: 'Cross-Border Reach',
     description:
-      'Serving both Indian and UAE markets with the local knowledge and international standards that each region demands.',
+      'Serving customers across India, GCC countries, the UK, the USA, Australia, and Ireland with local knowledge and international standards.',
   },
 ];
 
@@ -190,7 +197,7 @@ export const FAQ_ITEMS: FaqItem[] = [
   {
     question: 'What areas do you deliver to?',
     answer:
-      'We serve all districts across Kerala and major cities in India. We also supply to customers and businesses in the UAE — contact us for international shipping details and timelines.',
+      'We serve customers across India, GCC countries, the UK, the USA, Australia, and Ireland. Contact us for shipping details, timelines, and country-specific requirements.',
   },
   {
     question: 'Do you accept bulk or institutional orders?',
@@ -213,19 +220,21 @@ export const FAQ_ITEMS: FaqItem[] = [
       'We accept bank transfer, UPI, and other standard payment methods. Payment terms for bulk institutional orders can be discussed directly with our team.',
   },
   {
-    question: 'How do I contact your UAE office?',
+    question: 'How do I contact your international team?',
     answer:
-      'You can reach our UAE representative directly at +971 552986446. They handle enquiries, order coordination, and delivery support for our Gulf customers.',
+      'You can reach our team directly at +91 91885 51445 or through WhatsApp for enquiries, order coordination, and delivery support across our international service regions.',
   },
 ];
 
 export const CONTACT = {
   address: 'Palace Building, Jamalangadi, Edavanna\nPIN 676541, Malappuram District, Kerala',
   email: 'info.wellmedpharma@gmail.com',
-  phoneIndia: '+91 9633875445',
+  phoneIndia: '+91 91885 51445',
   whatsapp: '+91 91885 51445',
   whatsappLink: 'https://wa.me/919188551445',
+  phoneInternational: '+91 91885 51445',
   phoneUae: '+971 552986446',
+  whatsappUaeLink: 'https://wa.me/971552986446',
   mapUrl:
     'https://maps.google.com/maps?q=Edavanna,Malappuram,Kerala&t=&z=13&ie=UTF8&iwloc=&output=embed',
 };

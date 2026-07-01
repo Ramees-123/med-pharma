@@ -37,7 +37,7 @@ import { CONTACT } from '../../core/data/site-data';
               <div class="contact__icon"><i class="fas fa-phone"></i></div>
               <div>
                 <label>India</label>
-                <a href="tel:+919633875445">{{ contact.phoneIndia }}</a>
+                <a [href]="'tel:' + contact.phoneIndia">{{ contact.phoneIndia }}</a>
               </div>
             </div>
             <div class="contact__item">
@@ -50,10 +50,10 @@ import { CONTACT } from '../../core/data/site-data';
               </div>
             </div>
             <div class="contact__item">
-              <div class="contact__icon"><i class="fas fa-earth-europe"></i></div>
+              <div class="contact__icon"><i class="fab fa-whatsapp"></i></div>
               <div>
-                <label>UAE</label>
-                <a href="tel:+971552986446">{{ contact.phoneUae }}</a>
+                <label>WhatsApp UAE</label>
+                <a [href]="contact.whatsappUaeLink" target="_blank" rel="noopener">{{ contact.phoneUae }}</a>
               </div>
             </div>
           </div>
@@ -71,7 +71,7 @@ import { CONTACT } from '../../core/data/site-data';
             </div>
             <div class="col-md-6">
               <label class="contact__label">Phone Number</label>
-              <input type="tel" class="contact__input" placeholder="+91 or +971" [(ngModel)]="phone" />
+              <input type="tel" class="contact__input" placeholder="+91 or international" [(ngModel)]="phone" />
             </div>
             <div class="col-12">
               <label class="contact__label">Email Address</label>

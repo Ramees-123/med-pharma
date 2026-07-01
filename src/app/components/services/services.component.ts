@@ -17,7 +17,7 @@ import { SERVICES } from '../../core/data/site-data';
 
       <div class="services__grid">
         @for (service of services; track service.num) {
-          <div class="service-card">
+          <div class="service-card" [id]="service.anchorId">
             <div class="service-card__num">{{ service.num }}</div>
             <div class="service-card__icon">
               <i class="fas" [class]="service.icon"></i>

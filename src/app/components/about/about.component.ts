@@ -12,8 +12,8 @@ import { Component } from '@angular/core';
           <p class="section-body about__body">
             Well Med Pharma is a premier pharmaceutical distributor based in Malappuram,
             Kerala — committed to making genuine, high-quality medicines accessible across
-            India and the UAE. We combine the warmth of local service with the standards of
-            an international healthcare brand.
+            India, GCC countries, the UK, the USA, Australia, and Ireland. We combine the
+            warmth of local service with the standards of an international healthcare brand.
           </p>
           <div class="about__pills">
             @for (pill of pills; track pill) {
@@ -57,7 +57,7 @@ export class AboutComponent {
     'Genuine Medicines',
     'Quality Assured',
     'Fast Delivery',
-    'India & UAE',
+    'India & Global Reach',
     'Bulk Orders Welcome',
     '24/7 Support',
   ];
@@ -71,7 +71,7 @@ export class AboutComponent {
     {
       icon: 'fa-globe',
       title: 'Global Reach',
-      desc: 'Serving customers across India and the UAE.',
+      desc: 'Serving customers across India, GCC countries, the UK, the USA, Australia, and Ireland.',
     },
     {
       icon: 'fa-handshake',

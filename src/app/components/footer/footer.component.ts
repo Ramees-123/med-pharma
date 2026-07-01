@@ -11,7 +11,7 @@ import { CONTACT } from '../../core/data/site-data';
           <div class="footer__logo">Well<span>Med</span> Pharma</div>
           <p class="footer__desc">
             Healthcare Beyond Medicine. Trusted pharmaceutical products, genuine care, and
-            reliable service — across India and the UAE.
+            reliable service — across India, GCC countries, the UK, the USA, Australia, and Ireland.
           </p>
           <div class="footer__social">
             <a href="#" class="footer__social-btn" aria-label="Facebook"
@@ -49,8 +49,8 @@ import { CONTACT } from '../../core/data/site-data';
         <div class="footer__col">
           <h4>Services</h4>
           <ul>
-            @for (s of services; track s) {
-              <li><a href="#services">{{ s }}</a></li>
+            @for (service of services; track service.href) {
+              <li><a [href]="service.href">{{ service.label }}</a></li>
             }
           </ul>
         </div>
@@ -58,13 +58,13 @@ import { CONTACT } from '../../core/data/site-data';
         <div class="footer__col">
           <h4>Contact</h4>
           <ul>
-            <li><a href="tel:+919633875445">{{ contact.phoneIndia }}</a></li>
+            <li><a [href]="'tel:' + contact.phoneIndia">{{ contact.phoneIndia }}</a></li>
             <li>
-              <a [href]="contact.whatsappLink" target="_blank" rel="noopener">{{
-                contact.whatsapp
-              }}</a>
+              <a [href]="contact.whatsappUaeLink" target="_blank" rel="noopener"
+                >WhatsApp UAE: {{ contact.phoneUae }}</a
+              >
             </li>
-            <li><a href="tel:+971552986446">{{ contact.phoneUae }} (UAE)</a></li>
+            <li><a [href]="'tel:' + contact.phoneUae">{{ contact.phoneUae }}</a></li>
             <li><a [href]="'mailto:' + contact.email">{{ contact.email }}</a></li>
             <li><a href="#contact">Edavanna, Malappuram</a></li>
             <li><a href="#contact">Kerala — PIN 676541</a></li>
@@ -96,11 +96,11 @@ export class FooterComponent {
   ];
 
   readonly services = [
-    'Prescription Medicines',
-    'Healthcare Products',
-    'Wellness Solutions',
-    'Medical Supplies',
-    'Bulk Orders',
-    'Customer Support',
+    { label: 'Prescription Medicines', href: '#prescription-medicines' },
+    { label: 'Healthcare Products', href: '#healthcare-products' },
+    { label: 'Wellness Solutions', href: '#wellness-solutions' },
+    { label: 'Medical Supplies', href: '#medical-supplies' },
+    { label: 'Bulk Orders', href: '#bulk-orders' },
+    { label: 'Customer Support', href: '#customer-support' },
   ];
 }
