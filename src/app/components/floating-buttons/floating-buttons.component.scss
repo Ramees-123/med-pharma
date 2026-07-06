@@ -1,4 +1,4 @@
-@use '../../../styles/responsive' as *;
+﻿@use '../../../styles/responsive' as *;
 
 .float-wa {
   position: fixed;
@@ -46,14 +46,14 @@
   z-index: 700;
   width: 44px;
   height: 44px;
-  background: rgba(11, 44, 82, 0.95);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(13, 71, 161, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(12px);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.8);
   font-size: 0.85rem;
   cursor: pointer;
   transition: opacity 0.3s, transform 0.25s;
@@ -76,8 +76,8 @@
 
   @include up(992px) {
     &:hover {
-      border-color: var(--emerald);
-      color: var(--emerald);
+      border-color: var(--accent);
+      color: var(--accent);
       transform: translateY(-4px);
     }
   }

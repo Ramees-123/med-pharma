@@ -1,13 +1,17 @@
-@use '../../../styles/responsive' as *;
+﻿@use '../../../styles/responsive' as *;
 
-.faq {
-  padding: var(--section-pad) var(--container-pad);
-  background: var(--navy);
-}
+.faq { padding: var(--section-pad) var(--container-pad); background: var(--white); }
 
 .faq__header {
   max-width: 760px;
-  margin: 0 auto clamp(32px, 5vw, 60px);
+  margin: 0 auto clamp(28px, 5vw, 60px);
+  text-align: center;
+
+  .section-label {
+    justify-content: center;
+
+    &::before { display: none; }
+  }
 }
 
 .faq__list {
@@ -16,41 +20,46 @@
 }
 
 .faq__item {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid var(--grey-light);
+
+  &:first-child { border-top: 1px solid var(--grey-light); }
 }
 
 .faq__q {
   width: 100%;
   background: none;
   border: none;
-  color: var(--white);
+  color: var(--text);
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 18px 0;
-  font-size: clamp(0.88rem, 2.5vw, 0.95rem);
+  font-size: clamp(0.88rem, 2.5vw, 0.96rem);
   font-weight: 500;
   text-align: left;
   font-family: var(--font-sans);
   gap: 16px;
   min-height: var(--tap-min);
-  transition: color 0.25s;
+  transition: color 0.22s;
+  line-height: 1.5;
 
-  &:active,
-  &--open {
-    color: var(--emerald);
-  }
-
-  &--open .faq__icon {
-    transform: rotate(45deg);
-  }
+  &:active, &--open { color: var(--primary); }
+  &--open .faq__icon { transform: rotate(45deg); background: var(--primary); color: var(--white); }
 }
 
 .faq__icon {
-  font-size: 0.7rem;
-  color: var(--emerald);
-  transition: transform 0.3s;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--primary-bg);
+  border: 1px solid rgba(26,86,219,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6rem;
+  color: var(--primary);
+  transition: transform 0.28s, background 0.22s, color 0.22s;
   flex-shrink: 0;
 }
 
@@ -67,6 +76,6 @@
   p {
     font-size: clamp(0.82rem, 2vw, 0.87rem);
     line-height: 1.75;
-    color: rgba(255, 255, 255, 0.55);
+    color: var(--text-light);
   }
 }

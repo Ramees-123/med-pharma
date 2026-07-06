@@ -15,7 +15,7 @@ import { TESTIMONIALS } from '../../core/data/site-data';
         <div class="testimonials__track">
           @for (t of doubled; track $index) {
             <div class="testimonial-card glass-card">
-              <div class="testimonial-card__stars">★★★★★</div>
+              <div class="testimonial-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
               <p class="testimonial-card__text">{{ t.text }}</p>
               <div class="testimonial-card__author">
                 <div class="testimonial-card__avatar">{{ t.initials }}</div>

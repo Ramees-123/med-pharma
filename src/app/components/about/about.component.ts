@@ -7,13 +7,21 @@ import { Component } from '@angular/core';
     <section id="about" class="about">
       <div class="about__grid">
         <div>
-          <div class="section-label">Who We Are</div>
-          <h2 class="section-h2">A Legacy of<br /><em>Trusted Care</em></h2>
+          <div class="section-label">About Us</div>
+          <h2 class="section-h2">Trusted Personal<br /><em>Medicine Delivery</em> from India</h2>
           <p class="section-body about__body">
-            Well Med Pharma is a premier pharmaceutical distributor based in Malappuram,
-            Kerala — committed to making genuine, high-quality medicines accessible across
-            India, GCC countries, the UK, the USA, Australia, and Ireland. We combine the
-            warmth of local service with the standards of an international healthcare brand.
+            We are a trusted medicine delivery company based in Kerala, India, committed to providing
+            safe, genuine, and affordable medicines to customers across India and several international
+            destinations.
+          </p>
+          <p class="section-body about__body">
+            Our mission is to simplify the process of obtaining medicines from India by handling every
+            step professionally &mdash; from prescription verification to documentation, regulatory approvals,
+            courier processing, and doorstep delivery.
+          </p>
+          <p class="section-body about__body">
+            We specialize in delivering both English (Allopathic) medicines and Ayurvedic medicines
+            while ensuring full compliance with the regulations of the destination country.
           </p>
           <div class="about__pills">
             @for (pill of pills; track pill) {
@@ -26,9 +34,8 @@ import { Component } from '@angular/core';
           <div class="about__card glass-card">
             <div class="about__card-accent"></div>
             <p class="about__quote">
-              "Our mission is simple — to be the most trusted name in healthcare
-              distribution, ensuring every patient receives genuine medicine with dignity
-              and speed."
+              &ldquo;Our experienced team works closely with customers to make international medicine
+              shipping simple, secure, and stress-free.&rdquo;
             </p>
             <div class="about__icons">
               @for (item of features; track item.title) {
@@ -42,8 +49,8 @@ import { Component } from '@angular/core';
               }
             </div>
             <div class="about__badge">
-              <div class="about__badge-num">98%</div>
-              <div class="about__badge-lbl">Satisfaction</div>
+              <div class="about__badge-num">100%</div>
+              <div class="about__badge-lbl">Legal Compliance</div>
             </div>
           </div>
         </div>
@@ -55,33 +62,33 @@ import { Component } from '@angular/core';
 export class AboutComponent {
   readonly pills = [
     'Genuine Medicines',
-    'Quality Assured',
-    'Fast Delivery',
-    'India & Global Reach',
-    'Bulk Orders Welcome',
-    '24/7 Support',
+    'Prescription Verification',
+    'Legal International Shipping',
+    'Complete Documentation',
+    'Personal Medical Use Only',
+    'Responsive Customer Support',
   ];
 
   readonly features = [
     {
       icon: 'fa-shield-alt',
       title: 'Quality Promise',
-      desc: 'Every product meets strict pharmaceutical standards.',
+      desc: 'Every medicine is verified before dispatch.',
     },
     {
       icon: 'fa-globe',
       title: 'Global Reach',
-      desc: 'Serving customers across India, GCC countries, the UK, the USA, Australia, and Ireland.',
+      desc: 'Serving India, UAE, Saudi Arabia, Qatar, Oman, Bahrain, UK, USA, Ireland, and Australia.',
     },
     {
-      icon: 'fa-handshake',
-      title: 'Partnership',
-      desc: 'Long-term relationships built on trust.',
+      icon: 'fa-file-signature',
+      title: 'Documentation',
+      desc: 'Professional handling of all paperwork.',
     },
     {
       icon: 'fa-truck-fast',
-      title: 'Swift Delivery',
-      desc: 'Prompt dispatch with real-time coordination.',
+      title: 'Door-to-Door',
+      desc: 'Reliable doorstep delivery worldwide.',
     },
   ];
 }

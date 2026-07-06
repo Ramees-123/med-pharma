@@ -8,105 +8,84 @@ import { CONTACT } from '../../core/data/site-data';
   standalone: true,
   imports: [FormsModule],
   template: `
-    <section id="contact" class="contact">
-      <div class="contact__grid">
-        <div>
-          <div class="section-label">Get In Touch</div>
-          <h2 class="section-h2">Let's Talk <em>Healthcare</em></h2>
+    <section id="contact" class="contact section-blue">
+      <div class="contact__inner">
+        <div class="contact__header" data-aos="fade-up">
+          <div class="section-label section-label--center">Contact Us</div>
+          <h2 class="section-h2">Need Medicines<br />from <em>India</em>?</h2>
           <p class="section-body contact__intro">
-            Whether it's a single prescription or a bulk institutional order — we're ready
-            to help. Reach us on any channel, any time.
+            Our team is ready to help. Contact us for medicine availability, prescription verification,
+            international shipping, and documentation support.
           </p>
+        </div>
 
-          <div class="contact__items">
-            <div class="contact__item">
-              <div class="contact__icon"><i class="fas fa-location-dot"></i></div>
-              <div>
-                <label>Address</label>
-                <span>Palace Building, Jamalangadi, Edavanna<br />PIN 676541, Malappuram District, Kerala</span>
+        <div class="contact__grid">
+          <div class="contact__info" data-aos="fade-up">
+            <div class="contact__items">
+              <div class="contact__item">
+                <div class="contact__icon"><i class="fas fa-location-dot"></i></div>
+                <div>
+                  <label>Address</label>
+                  <span>Palace Building, Jamalangadi, Edavanna<br />PIN 676541, Malappuram District, Kerala</span>
+                </div>
               </div>
-            </div>
-            <div class="contact__item">
-              <div class="contact__icon"><i class="fas fa-envelope"></i></div>
-              <div>
-                <label>Email</label>
-                <a [href]="'mailto:' + contact.email">{{ contact.email }}</a>
+              <div class="contact__item">
+                <div class="contact__icon"><i class="fas fa-envelope"></i></div>
+                <div>
+                  <label>Email</label>
+                  <a [href]="'mailto:' + contact.email">{{ contact.email }}</a>
+                </div>
               </div>
-            </div>
-            <div class="contact__item">
-              <div class="contact__icon"><i class="fas fa-phone"></i></div>
-              <div>
-                <label>India</label>
-                <a [href]="'tel:' + contact.phoneIndia">{{ contact.phoneIndia }}</a>
+              <div class="contact__item">
+                <div class="contact__icon"><i class="fas fa-phone"></i></div>
+                <div>
+                  <label>India</label>
+                  <a [href]="'tel:' + contact.phoneIndia">{{ contact.phoneIndia }}</a>
+                </div>
               </div>
-            </div>
-            <div class="contact__item">
-              <div class="contact__icon"><i class="fab fa-whatsapp"></i></div>
-              <div>
-                <label>WhatsApp</label>
-                <a [href]="contact.whatsappLink" target="_blank" rel="noopener">{{
-                  contact.whatsapp
-                }}</a>
+              <div class="contact__item">
+                <div class="contact__icon"><i class="fab fa-whatsapp"></i></div>
+                <div>
+                  <label>WhatsApp</label>
+                  <a [href]="contact.whatsappLink" target="_blank" rel="noopener">{{ contact.whatsapp }}</a>
+                </div>
               </div>
-            </div>
-            <div class="contact__item">
-              <div class="contact__icon"><i class="fab fa-whatsapp"></i></div>
-              <div>
-                <label>WhatsApp UAE</label>
-                <a [href]="contact.whatsappUaeLink" target="_blank" rel="noopener">{{ contact.phoneUae }}</a>
+              <div class="contact__item">
+                <div class="contact__icon"><i class="fab fa-whatsapp"></i></div>
+                <div>
+                  <label>WhatsApp UAE</label>
+                  <a [href]="contact.whatsappUaeLink" target="_blank" rel="noopener">{{ contact.phoneUae }}</a>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div class="contact__form glass-card">
-          <div class="contact__form-accent"></div>
-          <h3>Send Us a Message</h3>
-          <p class="contact__form-sub">We typically respond within a few hours during business days.</p>
-
-          <div class="row g-3">
-            <div class="col-md-6">
-              <label class="contact__label">Full Name</label>
-              <input type="text" class="contact__input" placeholder="Your name" [(ngModel)]="name" />
-            </div>
-            <div class="col-md-6">
-              <label class="contact__label">Phone Number</label>
-              <input type="tel" class="contact__input" placeholder="+91 or international" [(ngModel)]="phone" />
-            </div>
-            <div class="col-12">
-              <label class="contact__label">Email Address</label>
-              <input type="email" class="contact__input" placeholder="your@email.com" [(ngModel)]="email" />
-            </div>
-            <div class="col-12">
-              <label class="contact__label">Enquiry Type</label>
-              <select class="contact__input" [(ngModel)]="enquiryType">
-                <option value="">Select an option</option>
-                @for (opt of enquiryOptions; track opt) {
-                  <option [value]="opt">{{ opt }}</option>
-                }
-              </select>
-            </div>
-            <div class="col-12">
-              <label class="contact__label">Message</label>
-              <textarea
-                class="contact__input contact__textarea"
-                placeholder="Describe your requirement in detail..."
-                [(ngModel)]="message"
-              ></textarea>
-            </div>
-            <div class="col-12">
-              <button
-                type="button"
-                class="contact__submit"
-                [class.contact__submit--sent]="sent()"
-                (click)="submit()"
-              >
-                @if (sent()) {
-                  <i class="fas fa-check"></i> Message Sent!
-                } @else {
-                  <i class="fas fa-paper-plane"></i> Send Message
-                }
-              </button>
+          <div class="contact__cta" data-aos="fade-up" data-aos-delay="100">
+            <div class="contact__cta-card">
+              <div class="contact__cta-accent"></div>
+              <h3>Get In Touch</h3>
+              <p>Contact us for:</p>
+              <ul>
+                <li><i class="fas fa-check-circle"></i> Medicine availability</li>
+                <li><i class="fas fa-check-circle"></i> Prescription verification</li>
+                <li><i class="fas fa-check-circle"></i> International shipping</li>
+                <li><i class="fas fa-check-circle"></i> Documentation support</li>
+                <li><i class="fas fa-check-circle"></i> SFDA assistance</li>
+                <li><i class="fas fa-check-circle"></i> MOH shipment guidance</li>
+                <li><i class="fas fa-check-circle"></i> Courier processing</li>
+                <li><i class="fas fa-check-circle"></i> Door-to-door medicine delivery</li>
+              </ul>
+              <p class="contact__cta-footer">
+                We are committed to delivering genuine medicines safely, legally, and on time.
+              </p>
+              <div class="contact__cta-actions">
+                <a [href]="'tel:' + contact.phoneIndia" class="btn-primary-wmp">
+                  <i class="fas fa-phone"></i> Call Us
+                </a>
+                <a [href]="contact.whatsappLink" class="btn-wa-wmp" target="_blank" rel="noopener">
+                  <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -131,25 +110,4 @@ export class ContactComponent {
   readonly mapUrl: SafeResourceUrl = this.sanitizer.bypassSecurityTrustResourceUrl(
     CONTACT.mapUrl
   );
-
-  readonly enquiryOptions = [
-    'Prescription Medicine',
-    'Healthcare Products',
-    'Bulk / Institutional Order',
-    'Medical Supplies',
-    'Wellness Products',
-    'General Enquiry',
-  ];
-
-  name = '';
-  phone = '';
-  email = '';
-  enquiryType = '';
-  message = '';
-  readonly sent = signal(false);
-
-  submit(): void {
-    this.sent.set(true);
-    setTimeout(() => this.sent.set(false), 3500);
-  }
 }

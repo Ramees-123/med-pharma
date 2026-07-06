@@ -1,8 +1,7 @@
-@use '../../../styles/responsive' as *;
+﻿@use '../../../styles/responsive' as *;
 
 .why {
   padding: var(--section-pad) var(--container-pad);
-  background: var(--navy-mid);
 }
 
 .why__header {
@@ -19,67 +18,70 @@
 .why__grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 16px;
+  gap: 12px;
   max-width: var(--content-max);
   margin: 0 auto;
 
-  @include up(576px) {
+  @include up(480px) {
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: 12px;
+  }
+
+  @include up(768px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
   }
 
   @include up(992px) {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
   }
 }
 
 .why-card {
-  padding: clamp(24px, 3vw, 36px) clamp(20px, 3vw, 28px);
-  transition: border-color 0.3s, box-shadow 0.3s;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.11);
+  border-radius: var(--card-radius);
+  padding: clamp(18px, 2.5vw, 28px) clamp(14px, 2vw, 24px);
+  transition: background 0.25s, transform 0.25s, border-color 0.25s;
   position: relative;
   overflow: hidden;
 
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent), var(--teal-light));
+    opacity: 0;
+    transition: opacity 0.25s;
+  }
+
   @include up(992px) {
     &:hover {
-      border-color: rgba(27, 169, 127, 0.2);
-      transform: translateY(-3px);
-      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
-
-      &::after {
-        transform: scaleX(1);
-      }
+      background: rgba(255,255,255,0.11);
+      transform: translateY(-4px);
+      border-color: rgba(255,255,255,0.2);
+      &::before { opacity: 1; }
     }
   }
 
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: linear-gradient(90deg, var(--emerald), var(--gold));
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.4s;
-  }
-
   &__icon {
-    font-size: 1.4rem;
-    color: var(--gold);
-    margin-bottom: 16px;
+    font-size: 1.3rem;
+    color: var(--accent-light);
+    margin-bottom: 12px;
   }
 
   h3 {
-    font-size: clamp(0.95rem, 2.5vw, 1rem);
+    font-size: clamp(0.85rem, 2.5vw, 0.95rem);
     font-weight: 600;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
+    color: var(--white);
   }
 
   p {
-    font-size: clamp(0.8rem, 2vw, 0.83rem);
-    line-height: 1.65;
-    color: rgba(255, 255, 255, 0.5);
+    font-size: clamp(0.76rem, 2vw, 0.82rem);
+    line-height: 1.68;
+    color: rgba(255,255,255,0.65);
   }
 }

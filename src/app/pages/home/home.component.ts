@@ -3,14 +3,17 @@ import { isPlatformBrowser } from '@angular/common';
 import { LoaderComponent } from '../../components/loader/loader.component';
 import { NavbarComponent } from '../../components/navbar/navbar.component';
 import { HeroComponent } from '../../components/hero/hero.component';
-import { StatsComponent } from '../../components/stats/stats.component';
 import { AboutComponent } from '../../components/about/about.component';
 import { VisionMissionComponent } from '../../components/vision-mission/vision-mission.component';
 import { ServicesComponent } from '../../components/services/services.component';
 import { ProcessComponent } from '../../components/process/process.component';
+import { ComplianceComponent } from '../../components/compliance/compliance.component';
+import { CommitmentComponent } from '../../components/commitment/commitment.component';
+import { StatsComponent } from '../../components/stats/stats.component';
 import { WhyChooseComponent } from '../../components/why-choose/why-choose.component';
 import { QualityPromiseComponent } from '../../components/quality-promise/quality-promise.component';
 import { TestimonialsComponent } from '../../components/testimonials/testimonials.component';
+import { CourierPartnersComponent } from '../../components/courier-partners/courier-partners.component';
 import { FaqComponent } from '../../components/faq/faq.component';
 import { ContactComponent } from '../../components/contact/contact.component';
 import { FooterComponent } from '../../components/footer/footer.component';
@@ -24,14 +27,17 @@ import { AnimationService } from '../../core/services/animation.service';
     LoaderComponent,
     NavbarComponent,
     HeroComponent,
-    StatsComponent,
     AboutComponent,
     VisionMissionComponent,
     ServicesComponent,
     ProcessComponent,
+    ComplianceComponent,
+    CommitmentComponent,
+    StatsComponent,
     WhyChooseComponent,
     QualityPromiseComponent,
     TestimonialsComponent,
+    CourierPartnersComponent,
     FaqComponent,
     ContactComponent,
     FooterComponent,
@@ -42,14 +48,17 @@ import { AnimationService } from '../../core/services/animation.service';
     <app-navbar />
     <main>
       <app-hero />
-      <app-stats />
       <app-about />
       <app-vision-mission />
       <app-services />
       <app-process />
+      <app-compliance />
+      <app-commitment />
+      <app-stats />
       <app-why-choose />
       <app-quality-promise />
       <app-testimonials />
+      <app-courier-partners />
       <app-faq />
       <app-contact />
     </main>

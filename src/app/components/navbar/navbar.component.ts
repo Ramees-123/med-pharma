@@ -6,8 +6,13 @@ import { Component, HostListener, OnDestroy, signal } from '@angular/core';
   template: `
     <nav class="navbar-wmp" [class.navbar-wmp--scrolled]="scrolled()" [class.navbar-wmp--open]="menuOpen()">
       <a href="#hero" class="navbar-wmp__logo" (click)="closeMenu()">
-        <img src="/icon3.png" alt="Well Med Pharma" class="navbar-wmp__logo-image" />
-        <span class="navbar-wmp__logo-text">Well<span>Med</span> Pharma</span>
+        <div class="navbar-wmp__logo-image-wrap">
+          <img src="/icon3.png" alt="Well Med Pharma" class="navbar-wmp__logo-image" />
+        </div>
+        <div class="navbar-wmp__logo-text">
+          <span class="logo-name">WellMed Pharma</span>
+          <span class="logo-sub">Trusted Medicine Delivery</span>
+        </div>
       </a>
 
       <ul class="navbar-wmp__links">
@@ -56,7 +61,7 @@ export class NavbarComponent implements OnDestroy {
     { label: 'About', href: '#about' },
     { label: 'Services', href: '#services' },
     { label: 'Process', href: '#process' },
-    { label: 'Reviews', href: '#testimonials' },
+    { label: 'Compliance', href: '#compliance' },
     { label: 'FAQ', href: '#faq' },
   ];
 

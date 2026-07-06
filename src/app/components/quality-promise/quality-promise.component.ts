@@ -5,19 +5,17 @@ import { Component } from '@angular/core';
   standalone: true,
   template: `
     <section id="quality" class="quality">
-      <div class="quality__inner glass-card" data-reveal data-aos="zoom-in">
+      <div class="quality__inner" data-reveal data-aos="zoom-in">
         <div class="quality__shield">
           <div class="quality__shield-ring"></div>
           <i class="fas fa-shield-halved"></i>
         </div>
         <div class="quality__content">
-          <div class="section-label">Quality Promise</div>
-          <h2 class="section-h2">Our Commitment to <em>Excellence</em></h2>
+          <div class="section-label">Quality Assurance</div>
+          <h2 class="section-h2">Every Shipment Carefully<br /><em>Checked & Verified</em></h2>
           <p class="section-body quality__text">
-            Every product that leaves Well Med Pharma has passed rigorous quality verification.
-            We source exclusively from licensed manufacturers, maintain complete supply-chain
-            documentation, and never compromise on authenticity — because your health deserves
-            nothing less than the best.
+            Every shipment is carefully checked before dispatch. We ensure that every medicine
+            meets our strict quality standards through comprehensive verification at every stage.
           </p>
           <div class="quality__badges">
             @for (badge of badges; track badge) {
@@ -32,9 +30,13 @@ import { Component } from '@angular/core';
 })
 export class QualityPromiseComponent {
   readonly badges = [
-    'Licensed Sourcing',
-    'Expiry Verified',
-    'Cold Chain Ready',
-    'Full Traceability',
+    'Medicine Verification',
+    'Expiry Date Checking',
+    'Prescription Validation',
+    'Secure Packaging',
+    'Safe Handling',
+    'Accurate Documentation',
+    'Reliable Courier Processing',
+    'Tracking Support',
   ];
 }

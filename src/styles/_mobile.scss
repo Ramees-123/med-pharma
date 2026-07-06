@@ -1,57 +1,27 @@
 @use 'responsive' as *;
 
-// Tighter mobile layout — matches desktop section rhythm at a smaller scale
 @include down(768px) {
-  :root {
-    --section-pad: 40px;
-    --container-pad: 16px;
-    --tap-min: 40px;
-  }
-
   .section-label {
     font-size: 0.58rem;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.18em;
     margin-bottom: 10px;
-    gap: 8px;
-
-    &::before {
-      width: 18px;
-    }
   }
 
   .section-h2 {
-    font-size: clamp(1.4rem, 5.5vw, 1.65rem);
+    font-size: clamp(1.5rem, 5.5vw, 1.85rem);
     margin-bottom: 12px;
-    line-height: 1.2;
+    line-height: 1.18;
   }
 
   .section-body {
-    font-size: 0.84rem;
-    line-height: 1.65;
-  }
-
-  section[id] {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    font-size: 0.875rem;
+    line-height: 1.72;
+    max-width: 100%;
   }
 }
 
 @include down(480px) {
-  :root {
-    --section-pad: 32px;
-    --container-pad: 14px;
-  }
-
-  .section-h2 {
-    font-size: 1.32rem;
-  }
-
-  .section-body {
-    font-size: 0.8rem;
-    line-height: 1.6;
-  }
-
-  .section-label {
-    font-size: 0.55rem;
-    margin-bottom: 8px;
-  }
+  .section-h2 { font-size: clamp(1.32rem, 6vw, 1.55rem); }
+  .section-body { font-size: 0.84rem; }
+  .section-label { font-size: 0.55rem; }
 }

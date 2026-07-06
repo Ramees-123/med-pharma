@@ -7,11 +7,10 @@ import { SERVICES } from '../../core/data/site-data';
   template: `
     <section id="services" class="services">
       <div class="services__header" data-reveal data-aos="fade-up">
-        <div class="section-label section-label--center">What We Offer</div>
-        <h2 class="section-h2">Our <em>Services</em></h2>
+        <div class="section-label section-label--center">Our Services</div>
+        <h2 class="section-h2">What We <em>Offer</em></h2>
         <p class="section-body services__desc">
-          From prescription medicines to bulk healthcare supply — we handle it all with
-          precision and care.
+          We supply medicines only for personal medical use and manage the complete legal shipping process.
         </p>
       </div>
 
@@ -25,7 +24,7 @@ import { SERVICES } from '../../core/data/site-data';
             <h3>{{ service.title }}</h3>
             <p>{{ service.description }}</p>
             <div class="service-card__arrow">
-              Explore <i class="fas fa-arrow-right"></i>
+              <i class="fas fa-arrow-right"></i>
             </div>
           </div>
         }

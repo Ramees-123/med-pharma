@@ -8,14 +8,23 @@ import { AnimationService } from '../../core/services/animation.service';
   template: `
     <div id="stats" class="stats" #statsSection>
       <div class="stats__inner">
-        @for (stat of stats; track stat.label) {
-          <div class="stats__item">
-            <div class="stats__num" [attr.data-target]="stat.target" [attr.data-suffix]="stat.suffix">
-              0{{ stat.suffix }}
+        <div class="stats__header">
+          <h2 class="stats__title">Our <em>Strength</em></h2>
+        </div>
+        <div class="stats__grid">
+          @for (stat of stats; track stat.label) {
+            <div class="stats__item">
+              <div class="stats__num" [attr.data-target]="stat.target" [attr.data-suffix]="stat.suffix">
+                @if (stat.suffix) {
+                  0{{ stat.suffix }}
+                } @else {
+                  0
+                }
+              </div>
+              <div class="stats__lbl">{{ stat.label }}</div>
             </div>
-            <div class="stats__lbl">{{ stat.label }}</div>
-          </div>
-        }
+          }
+        </div>
       </div>
     </div>
   `,

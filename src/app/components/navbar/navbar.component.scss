@@ -1,4 +1,4 @@
-@use '../../../styles/responsive' as *;
+﻿@use '../../../styles/responsive' as *;
 
 .navbar-wmp {
   position: fixed;
@@ -11,14 +11,14 @@
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  transition: background 0.3s, padding 0.3s, border-color 0.3s;
+  transition: background 0.3s, padding 0.3s;
 
   &--scrolled,
   &--open {
-    background: rgba(11, 44, 82, 0.95);
+    background: rgba(12, 45, 122, 0.96);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border-bottom: 1px solid var(--glass-border);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     padding-top: 12px;
     padding-bottom: 12px;
   }
@@ -28,32 +28,55 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-family: var(--font-serif);
-  font-size: clamp(1.05rem, 2.8vw, 1.35rem);
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  color: var(--white);
+  text-decoration: none;
   flex-shrink: 0;
   z-index: 1;
-  text-decoration: none;
+  transition: opacity 0.2s;
 
-  &-image {
+  &:hover { opacity: 0.88; }
+
+  &-image-wrap {
     width: 40px;
     height: 40px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid rgba(255,255,255,0.25);
+    box-shadow: 0 0 0 3px rgba(125,211,252,0.2);
+    background: rgba(255,255,255,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &-image {
+    width: 34px;
+    height: 34px;
     object-fit: contain;
-    border-radius: 0;
-    padding: 0;
-    background: transparent;
-    box-shadow: none;
+    border-radius: 50%;
+    display: block;
   }
 
   &-text {
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.15;
 
-    span {
-      color: var(--emerald);
+    .logo-name {
+      font-family: var(--font-serif);
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      color: var(--white);
+    }
+
+    .logo-sub {
+      font-family: var(--font-sans);
+      font-size: 0.5rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.45);
     }
   }
 }
@@ -73,7 +96,7 @@
     font-size: 0.78rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.75);
+    color: rgba(255, 255, 255, 0.8);
     transition: color 0.25s;
     padding: 8px 0;
     min-height: var(--tap-min);
@@ -87,13 +110,17 @@
 }
 
 .navbar-wmp__cta {
-  background: var(--emerald) !important;
+  background: linear-gradient(135deg, var(--accent), var(--accent-dark)) !important;
   color: var(--white) !important;
-  padding: 8px 18px !important;
-  border-radius: 4px;
+  padding: 8px 20px !important;
+  border-radius: var(--btn-radius);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  box-shadow: 0 3px 10px rgba(14,165,233,0.3);
 
   &:hover {
-    background: var(--emerald-light) !important;
+    background: linear-gradient(135deg, var(--accent-dark), var(--primary)) !important;
+    box-shadow: 0 4px 14px rgba(14,165,233,0.4);
   }
 }
 
@@ -138,8 +165,8 @@
   position: fixed;
   inset: 0;
   z-index: 799;
-  background: rgba(7, 22, 40, 0.6);
-  backdrop-filter: blur(4px);
+  background: rgba(12, 45, 122, 0.7);
+  backdrop-filter: blur(8px);
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -150,9 +177,9 @@
 .mobile-menu__panel {
   width: 100%;
   max-width: 400px;
-  background: rgba(11, 44, 82, 0.98);
-  border: 1px solid var(--glass-border);
-  border-radius: 8px;
+  background: rgba(12, 45, 122, 0.98);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--card-radius);
   padding: 32px 24px;
   display: flex;
   flex-direction: column;
@@ -179,7 +206,7 @@
 }
 
 .mobile-menu__cta {
-  background: var(--emerald) !important;
+  background: var(--accent) !important;
   margin-top: 8px;
   font-family: var(--font-sans) !important;
   font-size: 0.85rem !important;
@@ -190,7 +217,7 @@
 .mobile-menu__close {
   background: none;
   border: none;
-  color: var(--grey);
+  color: rgba(255, 255, 255, 0.5);
   font-size: 0.9rem;
   cursor: pointer;
   margin-top: 12px;

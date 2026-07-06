@@ -1,0 +1,124 @@
+@use '../../../styles/responsive' as *;
+
+.courier-partners {
+  padding: var(--section-pad) var(--container-pad);
+  background: var(--white);
+  overflow: hidden;
+}
+
+.courier-partners__inner {
+  max-width: var(--content-max);
+  margin: 0 auto;
+}
+
+.courier-partners__header {
+  max-width: 680px;
+  margin: 0 auto clamp(36px, 5vw, 64px);
+  text-align: center;
+}
+
+.courier-partners__sub {
+  margin-top: 12px;
+  color: var(--text-light);
+}
+
+.courier-partners__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+
+  @include up(480px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  @include up(768px) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+}
+
+.courier-card {
+  background: var(--white);
+  border: 1px solid var(--grey-light);
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+  @include up(992px) {
+    &:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+    }
+  }
+
+  &__img-wrap {
+    width: 100%;
+    height: clamp(140px, 30vw, 200px);
+    overflow: hidden;
+    background: #f5f8ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      transition: transform 0.4s ease;
+    }
+  }
+
+  &:hover &__img-wrap img {
+    transform: scale(1.04);
+  }
+
+  &__body {
+    padding: clamp(14px, 2.5vw, 20px) clamp(14px, 2.5vw, 22px) clamp(16px, 3vw, 24px);
+  }
+
+  &__name {
+    font-size: clamp(0.9rem, 2.5vw, 1.05rem);
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+
+  &__desc {
+    font-size: clamp(0.78rem, 2vw, 0.85rem);
+    color: var(--text-light);
+    line-height: 1.65;
+    margin-bottom: 12px;
+  }
+}
+
+.courier-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.courier-tag {
+  font-size: 0.68rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background: var(--primary-bg);
+  color: var(--primary);
+  border: 1px solid rgba(26,86,219,0.12);
+  letter-spacing: 0.02em;
+}
+
+.courier-partners__note {
+  margin-top: clamp(28px, 4vw, 48px);
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-light);
+
+  i {
+    color: var(--primary);
+    margin-right: 6px;
+  }
+}
