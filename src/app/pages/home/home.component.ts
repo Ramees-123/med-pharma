@@ -1,6 +1,5 @@
 import { AfterViewInit, Component, inject, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
-import { LoaderComponent } from '../../components/loader/loader.component';
 import { NavbarComponent } from '../../components/navbar/navbar.component';
 import { HeroComponent } from '../../components/hero/hero.component';
 import { AboutComponent } from '../../components/about/about.component';
@@ -24,7 +23,6 @@ import { AnimationService } from '../../core/services/animation.service';
   selector: 'app-home',
   standalone: true,
   imports: [
-    LoaderComponent,
     NavbarComponent,
     HeroComponent,
     AboutComponent,
@@ -44,7 +42,6 @@ import { AnimationService } from '../../core/services/animation.service';
     FloatingButtonsComponent,
   ],
   template: `
-    <app-loader />
     <app-navbar />
     <main>
       <app-hero />

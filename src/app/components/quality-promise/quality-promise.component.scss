@@ -1,6 +1,9 @@
 ﻿@use '../../../styles/responsive' as *;
 
-.quality { padding: var(--section-pad) var(--container-pad); background: var(--surface); }
+.quality { 
+  padding: var(--section-pad) var(--container-pad); 
+  background: linear-gradient(180deg, var(--primary-dark) 0%, var(--primary) 100%);
+}
 
 .quality__inner {
   max-width: var(--content-max);
@@ -9,14 +12,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 28px;
+  gap: 32px;
   text-align: center;
   position: relative;
   overflow: hidden;
-  background: var(--white);
-  border: 1px solid var(--grey-light);
+  background: rgba(14, 30, 51, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: var(--card-radius);
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-xl);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
 
   @include up(768px) {
     flex-direction: row;
@@ -30,7 +35,8 @@
     position: absolute;
     top: 0; left: 0; right: 0;
     height: 3px;
-    background: linear-gradient(90deg, var(--primary), var(--accent), var(--teal));
+    background: linear-gradient(90deg, var(--accent), var(--gold), var(--accent));
+    opacity: 0.85;
   }
 }
 
@@ -50,16 +56,17 @@
 
   i {
     font-size: clamp(2.5rem, 8vw, 4rem);
-    color: var(--primary);
+    color: var(--accent);
     position: relative;
     z-index: 1;
+    filter: drop-shadow(0 4px 12px rgba(29, 186, 140, 0.4));
   }
 }
 
 .quality__shield-ring {
   position: absolute;
   inset: 0;
-  border: 2px solid rgba(21, 101, 192, 0.15);
+  border: 2px solid rgba(29, 186, 140, 0.2);
   border-radius: 50%;
 }
 
@@ -71,6 +78,9 @@
 .quality__text {
   max-width: none;
   margin-bottom: 20px;
+  color: var(--text-body);
+  font-size: clamp(0.88rem, 2vw, 0.96rem);
+  line-height: 1.7;
 }
 
 .quality__badges {
@@ -89,14 +99,17 @@
   align-items: center;
   gap: 6px;
   padding: 7px 12px;
-  border: 1px solid rgba(26,86,219,0.15);
-  border-radius: 6px;
+  border: 1px solid rgba(29, 186, 140, 0.2);
+  border-radius: 8px;
   font-size: clamp(0.68rem, 1.8vw, 0.78rem);
-  color: var(--primary);
-  background: var(--primary-bg);
+  color: var(--text-light);
+  background: rgba(29, 186, 140, 0.08);
   font-weight: 500;
 
-  i { font-size: 0.6rem; color: var(--accent); }
+  i { 
+    font-size: 0.65rem; 
+    color: var(--accent); 
+  }
 }
 
 @include up(992px) {

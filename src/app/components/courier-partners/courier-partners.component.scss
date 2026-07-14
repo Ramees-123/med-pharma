@@ -2,8 +2,9 @@
 
 .courier-partners {
   padding: var(--section-pad) var(--container-pad);
-  background: var(--white);
+  background: linear-gradient(180deg, var(--primary) 0%, var(--primary-dark) 100%);
   overflow: hidden;
+  position: relative;
 }
 
 .courier-partners__inner {
@@ -39,17 +40,20 @@
 }
 
 .courier-card {
-  background: var(--white);
-  border: 1px solid var(--grey-light);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
   border-radius: var(--card-radius);
   overflow: hidden;
-  box-shadow: var(--shadow-sm);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: var(--shadow-md);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 
   @include up(992px) {
     &:hover {
-      transform: translateY(-6px);
-      box-shadow: var(--shadow-lg);
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-xl);
+      border-color: rgba(29,186,140,0.3);
     }
   }
 
@@ -57,7 +61,7 @@
     width: 100%;
     height: clamp(140px, 30vw, 200px);
     overflow: hidden;
-    background: #f5f8ff;
+    background: rgba(255,255,255,0.06);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -82,7 +86,7 @@
   &__name {
     font-size: clamp(0.9rem, 2.5vw, 1.05rem);
     font-weight: 700;
-    color: var(--text);
+    color: var(--white);
     margin-bottom: 6px;
   }
 
@@ -106,8 +110,8 @@
   padding: 4px 10px;
   border-radius: 20px;
   background: var(--primary-bg);
-  color: var(--primary);
-  border: 1px solid rgba(26,86,219,0.12);
+  color: var(--accent-light);
+  border: 1px solid rgba(29,186,140,0.2);
   letter-spacing: 0.02em;
 }
 
@@ -115,10 +119,10 @@
   margin-top: clamp(28px, 4vw, 48px);
   text-align: center;
   font-size: 0.85rem;
-  color: var(--text-light);
+  color: var(--text-body);
 
   i {
-    color: var(--primary);
+    color: var(--accent);
     margin-right: 6px;
   }
 }

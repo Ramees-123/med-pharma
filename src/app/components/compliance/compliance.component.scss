@@ -2,6 +2,9 @@
 
 .compliance {
   padding: var(--section-pad) var(--container-pad);
+  background: linear-gradient(180deg, var(--primary) 0%, var(--primary-dark) 100%);
+  position: relative;
+  overflow: hidden;
 }
 
 .compliance__inner {
@@ -23,49 +26,75 @@
 .compliance__grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 16px;
+  gap: 20px;
   max-width: 1000px;
   margin: 0 auto;
 
   @include up(576px) {
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: 24px;
   }
 
   @include up(768px) {
     grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+    gap: 28px;
   }
 }
 
 .compliance__card {
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
   border-radius: var(--card-radius);
-  padding: clamp(20px, 3vw, 32px);
-  transition: background 0.25s, transform 0.25s;
-  backdrop-filter: blur(4px);
+  padding: clamp(24px, 3vw, 32px);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: var(--shadow-md);
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    border-radius: 2px 2px 0 0;
+  }
 
   @include up(992px) {
     &:hover {
-      background: rgba(255,255,255,0.13);
-      transform: translateY(-4px);
+      background: rgba(255,255,255,0.06);
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-xl);
+      border-color: rgba(29,186,140,0.3);
+      
+      &::before {
+        opacity: 1;
+      }
     }
   }
 
   h3 {
-    font-size: clamp(0.88rem, 2.5vw, 1.05rem);
+    font-family: var(--font-display);
+    font-size: clamp(0.95rem, 2.5vw, 1.1rem);
     font-weight: 600;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
     display: flex;
     align-items: flex-start;
-    gap: 8px;
+    gap: 10px;
     line-height: 1.4;
+    color: var(--white);
+    text-shadow: 0 1px 8px rgba(0,0,0,0.2);
 
     i {
-      color: var(--accent-light);
-      font-size: 0.9rem;
-      margin-top: 3px;
+      color: var(--accent);
+      font-size: 1rem;
+      margin-top: 2px;
       flex-shrink: 0;
     }
   }
@@ -76,36 +105,39 @@
     margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 10px;
 
     li {
-      font-size: clamp(0.78rem, 2vw, 0.85rem);
-      line-height: 1.6;
-      color: rgba(255, 255, 255, 0.8);
-      padding-left: 18px;
+      font-size: clamp(0.82rem, 2vw, 0.88rem);
+      line-height: 1.65;
+      color: var(--text-body);
+      padding-left: 22px;
       position: relative;
+      opacity: 0.9;
 
       &::before {
         content: '\2713';
         position: absolute;
         left: 0;
-        color: var(--accent-light);
+        color: var(--accent);
         font-weight: 700;
+        font-size: 0.9rem;
       }
     }
   }
 }
 
 .compliance__flag {
-  width: 44px;
-  height: 44px;
-  background: rgba(255,255,255,0.1);
-  border: 1px solid rgba(255,255,255,0.15);
-  border-radius: 10px;
+  width: 48px;
+  height: 48px;
+  background: rgba(29,186,140,0.1);
+  border: 1px solid rgba(29,186,140,0.2);
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.1rem;
-  color: var(--white);
-  margin-bottom: 16px;
+  font-size: 1.2rem;
+  color: var(--accent);
+  margin-bottom: 18px;
+  box-shadow: 0 4px 12px rgba(29,186,140,0.15);
 }

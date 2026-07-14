@@ -9,10 +9,6 @@ import { Component, HostListener, OnDestroy, signal } from '@angular/core';
         <div class="navbar-wmp__logo-image-wrap">
           <img src="/icon3.png" alt="Well Med Pharma" class="navbar-wmp__logo-image" />
         </div>
-        <div class="navbar-wmp__logo-text">
-          <span class="logo-name">WellMed Pharma</span>
-          <span class="logo-sub">Trusted Medicine Delivery</span>
-        </div>
       </a>
 
       <ul class="navbar-wmp__links">

@@ -19,7 +19,11 @@ export class AnimationService {
   }
 
   private shouldAnimate(): boolean {
-    return isPlatformBrowser(this.platformId) && !this.isMobile && !this.prefersReducedMotion;
+    return isPlatformBrowser(this.platformId) && !this.prefersReducedMotion;
+  }
+
+  private shouldAnimateCounter(): boolean {
+    return isPlatformBrowser(this.platformId);
   }
 
   init(): void {
@@ -118,26 +122,35 @@ export class AnimationService {
     }
   }
 
-  animateCounter(el: HTMLElement, target: number, suffix: string): void {
-    if (!isPlatformBrowser(this.platformId)) return;
+  animateCounter(el: HTMLElement, target: number, suffix: string, onComplete?: () => void): void {
+    if (!isPlatformBrowser(this.platformId)) {
+      onComplete?.();
+      return;
+    }
 
-    if (!this.shouldAnimate()) {
+    if (!this.shouldAnimateCounter()) {
       el.textContent = target.toLocaleString() + suffix;
+      onComplete?.();
       return;
     }
 
     try {
+      this.init();
       const obj = { val: 0 };
       gsap.to(obj, {
         val: target,
-        duration: 1.8,
+        duration: 2,
         ease: 'power2.out',
         onUpdate: () => {
           el.textContent = Math.round(obj.val).toLocaleString() + suffix;
         },
+        onComplete: () => {
+          onComplete?.();
+        },
       });
     } catch {
       el.textContent = target.toLocaleString() + suffix;
+      onComplete?.();
     }
   }
 }

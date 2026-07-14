@@ -2,8 +2,9 @@
 
 .vision {
   padding: var(--section-pad) var(--container-pad);
-  background: var(--white);
+  background: linear-gradient(180deg, var(--primary-dark) 0%, var(--primary) 100%);
   position: relative;
+  overflow: hidden;
 }
 
 .vision__header {
@@ -15,77 +16,93 @@
 .vision__grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 16px;
+  gap: 20px;
   max-width: 1000px;
   margin: 0 auto;
 
   @include up(768px) {
     grid-template-columns: 1fr 1fr;
-    gap: 24px;
+    gap: 28px;
   }
 }
 
 .vision__card {
-  padding: clamp(22px, 3vw, 40px) clamp(18px, 2.5vw, 36px);
-  background: var(--white);
-  border: 1px solid var(--grey-light);
+  padding: clamp(28px, 3vw, 44px) clamp(20px, 2.5vw, 36px);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
   border-radius: var(--card-radius);
   position: relative;
   overflow: hidden;
-  transition: box-shadow 0.25s, transform 0.25s;
-  box-shadow: var(--shadow-sm);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: var(--shadow-md);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
 
   &::before {
     content: '';
     position: absolute;
     top: 0; left: 0; right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, var(--primary), var(--accent));
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    border-radius: 2px 2px 0 0;
+    opacity: 0;
+    transition: opacity 0.4s ease;
   }
 
   @include up(992px) {
-    &:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); }
+    &:hover {
+      box-shadow: var(--shadow-xl);
+      transform: translateY(-8px);
+      border-color: rgba(29,186,140,0.3);
+      
+      &::before {
+        opacity: 1;
+      }
+    }
   }
 
   h3 {
-    font-family: var(--font-serif);
-    font-size: clamp(1.15rem, 3vw, 1.55rem);
-    font-weight: 600;
-    margin-bottom: 16px;
-    color: var(--text);
+    font-family: var(--font-display);
+    font-size: clamp(1.15rem, 2.5vw, 1.4rem);
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--white);
+    text-shadow: 0 1px 8px rgba(0,0,0,0.2);
   }
 }
 
 .vision__icon {
-  width: 48px;
-  height: 48px;
-  background: var(--primary-bg);
-  border: 1px solid rgba(21, 101, 192, 0.15);
-  border-radius: 8px;
+  width: 52px;
+  height: 52px;
+  background: rgba(29,186,140,0.1);
+  border: 1px solid rgba(29,186,140,0.2);
+  border-radius: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.1rem;
-  color: var(--primary);
-  margin-bottom: 20px;
+  font-size: 1.2rem;
+  color: var(--accent);
+  margin-bottom: 22px;
+  box-shadow: 0 4px 16px rgba(29,186,140,0.2);
 }
 
 .vision__list {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
 
   span {
-    font-size: clamp(0.82rem, 2vw, 0.87rem);
-    line-height: 1.5;
-    color: var(--text-light);
+    font-size: clamp(0.84rem, 2vw, 0.92rem);
+    line-height: 1.65;
+    color: var(--text-body);
     display: flex;
     align-items: flex-start;
-    gap: 10px;
+    gap: 12px;
+    opacity: 0.95;
 
     i {
-      color: var(--primary);
-      font-size: 0.75rem;
+      color: var(--accent);
+      font-size: 0.78rem;
       margin-top: 3px;
       flex-shrink: 0;
     }

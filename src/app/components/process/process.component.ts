@@ -7,7 +7,7 @@ import { PROCESS_STEPS } from '../../core/data/site-data';
   template: `
     <section id="process" class="process">
       <div class="process__header" data-reveal data-aos="fade-up">
-        <div class="section-label section-label--center">Our Process</div>
+        <div class="section-label section-label--center section-label--light">Our Process</div>
         <h2 class="section-h2">Complete End-to-End <em>Process</em></h2>
         <p class="section-body process__desc">
           We manage the complete process for our customers &mdash; from prescription verification to doorstep delivery.

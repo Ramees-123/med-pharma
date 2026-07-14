@@ -1,0 +1,96 @@
+.faq {
+  padding: var(--section-pad) var(--container-pad);
+  background: linear-gradient(180deg, var(--primary) 0%, var(--primary-dark) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.faq__header {
+  max-width: 760px;
+  margin: 0 auto clamp(28px, 5vw, 60px);
+  text-align: center;
+}
+.faq__header .section-label {
+  justify-content: center;
+}
+.faq__header .section-label::before {
+  display: none;
+}
+
+.faq__list {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.faq__item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+  z-index: 1;
+}
+.faq__item:first-child {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.faq__q {
+  width: 100%;
+  background: none;
+  border: none;
+  color: var(--white);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
+  font-weight: 600;
+  text-align: left;
+  font-family: var(--font-display);
+  gap: 16px;
+  min-height: var(--tap-min);
+  transition: all 0.3s ease;
+  line-height: 1.5;
+  text-shadow: 0 1px 8px rgba(10, 22, 40, 0.3);
+}
+.faq__q:active, .faq__q--open {
+  color: var(--accent-light);
+}
+.faq__q--open .faq__icon {
+  transform: rotate(45deg);
+  background: rgba(29, 186, 140, 0.15);
+  color: var(--accent);
+  border-color: rgba(29, 186, 140, 0.3);
+}
+
+.faq__icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(29, 186, 140, 0.1);
+  border: 1px solid rgba(29, 186, 140, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.65rem;
+  color: var(--accent);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(29, 186, 140, 0.15);
+}
+
+.faq__a {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+}
+.faq__a--open {
+  max-height: 400px;
+  padding-bottom: 20px;
+}
+.faq__a p {
+  font-size: clamp(0.84rem, 2vw, 0.92rem);
+  line-height: 1.75;
+  color: var(--text-light);
+  opacity: 0.95;
+  font-weight: 400;
+}
+/*# sourceMappingURL=faq.component.css.map */

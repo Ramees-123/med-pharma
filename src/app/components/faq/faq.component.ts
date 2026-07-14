@@ -7,7 +7,7 @@ import { FAQ_ITEMS } from '../../core/data/site-data';
   template: `
     <section id="faq" class="faq">
       <div class="faq__header" data-reveal data-aos="fade-up">
-        <div class="section-label">Common Questions</div>
+        <div class="section-label section-label--light">Common Questions</div>
         <h2 class="section-h2">Frequently Asked <em>Questions</em></h2>
       </div>
 

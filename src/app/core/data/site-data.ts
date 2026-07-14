@@ -31,7 +31,7 @@ export interface FaqItem {
 }
 
 export const STATS = [
-  { target: 100, label: 'Happy Customers', suffix: '+' },
+  { target: 1000, label: 'Happy Customers', suffix: '+' },
   { target: 3, label: 'Years of Trusted Service', suffix: '+' },
   { target: 12, label: 'Countries Served', suffix: '' },
   { target: 100, label: 'Delivery Success Rate', suffix: '%' },

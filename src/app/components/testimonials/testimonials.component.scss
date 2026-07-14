@@ -2,8 +2,9 @@
 
 .testimonials {
   padding: var(--section-pad) var(--container-pad);
-  background: var(--white);
+  background: linear-gradient(180deg, var(--primary) 0%, var(--primary-dark) 100%);
   overflow: hidden;
+  position: relative;
 }
 
 .testimonials__header {
@@ -21,12 +22,12 @@
 
 .testimonials__track {
   display: flex;
-  gap: 16px;
+  gap: 20px;
   animation: scrollTest 24s linear infinite;
   width: max-content;
 
   @include up(992px) {
-    gap: 24px;
+    gap: 28px;
 
     &:hover {
       animation-play-state: paused;
@@ -43,13 +44,15 @@
 
 .testimonial-card {
   min-width: min(300px, 85vw);
-  padding: clamp(22px, 4vw, 32px);
+  padding: clamp(28px, 4vw, 36px);
   flex-shrink: 0;
   position: relative;
-  background: var(--white);
-  border: 1px solid var(--grey-light);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
   border-radius: var(--card-radius);
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-md);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 
   @include up(576px) { min-width: 340px; }
   @include up(768px) { min-width: 360px; }
@@ -62,11 +65,12 @@
   }
 
   &__text {
-    font-size: clamp(0.85rem, 2vw, 0.9rem);
-    line-height: 1.7;
-    color: var(--text-light);
-    margin-bottom: 20px;
+    font-size: clamp(0.88rem, 2vw, 0.95rem);
+    line-height: 1.75;
+    color: var(--text-body);
+    margin-bottom: 22px;
     font-style: italic;
+    opacity: 0.9;
   }
 
   &__author {
@@ -90,14 +94,17 @@
   }
 
   &__name {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     font-weight: 600;
-    color: var(--text);
+    color: var(--white);
+    font-family: var(--font-display);
+    text-shadow: 0 1px 8px rgba(0,0,0,0.2);
   }
 
   &__role {
-    font-size: 0.72rem;
-    color: var(--text-light);
+    font-size: 0.75rem;
+    color: var(--text-body);
+    opacity: 0.9;
   }
 
   &::before {
@@ -105,7 +112,7 @@
     font-family: var(--font-serif);
     font-size: clamp(3rem, 10vw, 6rem);
     line-height: 0.8;
-    color: rgba(21, 101, 192, 0.06);
+    color: rgba(29,186,140,0.12);
     position: absolute;
     top: 16px;
     left: 20px;

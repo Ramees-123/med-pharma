@@ -1,0 +1,117 @@
+.courier-partners {
+  padding: var(--section-pad) var(--container-pad);
+  background: linear-gradient(180deg, var(--primary) 0%, var(--primary-dark) 100%);
+  overflow: hidden;
+  position: relative;
+}
+
+.courier-partners__inner {
+  max-width: var(--content-max);
+  margin: 0 auto;
+}
+
+.courier-partners__header {
+  max-width: 680px;
+  margin: 0 auto clamp(36px, 5vw, 64px);
+  text-align: center;
+}
+
+.courier-partners__sub {
+  margin-top: 12px;
+  color: var(--text-light);
+}
+
+.courier-partners__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+@media (min-width: 480px) {
+  .courier-partners__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+@media (min-width: 768px) {
+  .courier-partners__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+}
+
+.courier-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+@media (min-width: 992px) {
+  .courier-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+    border-color: rgba(29, 186, 140, 0.3);
+  }
+}
+.courier-card__img-wrap {
+  width: 100%;
+  height: clamp(140px, 30vw, 200px);
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.courier-card__img-wrap img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  transition: transform 0.4s ease;
+}
+.courier-card:hover .courier-card__img-wrap img {
+  transform: scale(1.04);
+}
+.courier-card__body {
+  padding: clamp(14px, 2.5vw, 20px) clamp(14px, 2.5vw, 22px) clamp(16px, 3vw, 24px);
+}
+.courier-card__name {
+  font-size: clamp(0.9rem, 2.5vw, 1.05rem);
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 6px;
+}
+.courier-card__desc {
+  font-size: clamp(0.78rem, 2vw, 0.85rem);
+  color: var(--text-light);
+  line-height: 1.65;
+  margin-bottom: 12px;
+}
+
+.courier-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.courier-tag {
+  font-size: 0.68rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background: var(--primary-bg);
+  color: var(--accent-light);
+  border: 1px solid rgba(29, 186, 140, 0.2);
+  letter-spacing: 0.02em;
+}
+
+.courier-partners__note i {
+  color: var(--primary);
+  margin-right: 6px;
+}
+/*# sourceMappingURL=courier-partners.component.css.map */

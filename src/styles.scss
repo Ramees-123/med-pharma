@@ -15,7 +15,7 @@ html {
 
 body {
   font-family: var(--font-sans);
-  background: var(--white);
+  background: linear-gradient(180deg, var(--primary) 0%, var(--primary-dark) 100%);
   color: var(--text);
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
@@ -23,6 +23,7 @@ body {
   -webkit-tap-highlight-color: transparent;
   padding-bottom: var(--safe-bottom);
   line-height: 1.65;
+  min-height: 100vh;
 }
 
 a { text-decoration: none; color: inherit; }
@@ -55,6 +56,18 @@ html.aos-init [data-aos]:not(.aos-animate) {
     scroll-behavior: auto !important;
   }
   [data-aos] { opacity: 1 !important; transform: none !important; }
+}
+
+/* ── Background Pattern ──────────────────────────────────── */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(29,186,140,0.08) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 80% 80%, rgba(214,179,71,0.05) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
 }
 
 /* ── Section Label ───────────────────────────────────────── */
@@ -93,16 +106,17 @@ html.aos-init [data-aos]:not(.aos-animate) {
 .section-h2 {
   font-family: var(--font-serif);
   font-size: clamp(1.75rem, 4vw, 3rem);
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.18;
   letter-spacing: -0.02em;
   margin-bottom: 18px;
   word-wrap: break-word;
-  color: var(--text);
+  color: var(--white);
 
   em {
     font-style: italic;
-    color: var(--primary);
+    color: var(--accent-light);
+    font-weight: 700;
   }
 }
 
@@ -113,6 +127,7 @@ html.aos-init [data-aos]:not(.aos-animate) {
   color: var(--text-body);
   font-weight: 400;
   max-width: 540px;
+  opacity: 0.95;
 
   &--full { max-width: none; }
   &--center { margin: 0 auto; text-align: center; }
@@ -258,7 +273,16 @@ html.aos-init [data-aos]:not(.aos-animate) {
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-radius: var(--card-radius);
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-md);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+  @include up(992px) {
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-xl);
+      border-color: rgba(255,255,255,0.15);
+    }
+  }
 }
 
 .glass-card-dark {
@@ -267,6 +291,7 @@ html.aos-init [data-aos]:not(.aos-animate) {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-radius: var(--card-radius);
+  box-shadow: var(--shadow-lg);
 }
 
 /* ── Scrollbar ───────────────────────────────────────────── */

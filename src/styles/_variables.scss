@@ -1,60 +1,61 @@
 :root {
-  /* ── Palette ─────────────────────────────────────────── */
-  --primary:        #1a56db;
-  --primary-dark:   #1040b0;
-  --primary-deeper: #0c2d7a;
-  --primary-light:  #5b8ef0;
-  --primary-bg:     #eef4ff;
-  --primary-bg2:    #dbeafe;
+  /* ── Premium Healthcare Palette ─────────────────────────── */
+  --primary:        #081B33;
+  --primary-dark:   #102A4C;
+  --primary-deeper: #0A1628;
+  --primary-light:  #1E3A5F;
+  --primary-bg:     #0F2038;
+  --primary-bg2:    #162D4A;
 
-  --accent:         #0ea5e9;
-  --accent-dark:    #0284c7;
-  --accent-light:   #7dd3fc;
+  --accent:         #1DBA8C;
+  --accent-dark:    #18A07D;
+  --accent-light:   #28D39C;
 
-  --teal:           #0d9488;
-  --teal-light:     #5eead4;
+  --gold:           #D6B347;
+  --gold-light:     #E8C96A;
 
-  --white:          #ffffff;
-  --off-white:      #f8fafd;
-  --surface:        #f1f5fb;
-  --grey-light:     #e2e8f0;
-  --grey:           #94a3b8;
+  --white:          #FFFFFF;
+  --off-white:      #F8FAFC;
+  --surface:        #0E1E33;
+  --grey-light:     #1E3A5F;
+  --grey:           #64748B;
   --grey-dark:      #475569;
-  --text:           #0f172a;
-  --text-body:      #334155;
-  --text-light:     #64748b;
-  --text-muted:     #94a3b8;
+  --text:           #FFFFFF;
+  --text-body:      #E2E8F0;
+  --text-light:     #CBD5E1;
+  --text-muted:     #94A3B8;
 
-  --success:        #16a34a;
-  --wa-green:       #25d366;
+  --success:        #1DBA8C;
+  --wa-green:       #25D366;
 
   /* ── Glass ───────────────────────────────────────────── */
-  --glass:          rgba(255,255,255,0.88);
-  --glass-border:   rgba(255,255,255,0.28);
-  --glass-dark:     rgba(255,255,255,0.07);
-  --glass-border-dark: rgba(255,255,255,0.14);
+  --glass:          rgba(255,255,255,0.04);
+  --glass-border:   rgba(255,255,255,0.08);
+  --glass-dark:     rgba(8,27,51,0.85);
+  --glass-border-dark: rgba(255,255,255,0.12);
 
   /* ── Spacing ─────────────────────────────────────────── */
-  --section-pad:    clamp(64px, 7vw, 108px);
-  --container-pad:  clamp(20px, 5vw, 72px);
-  --content-max:    1160px;
-  --card-radius:    16px;
-  --btn-radius:     10px;
-  --tap-min:        44px;
+  --section-pad:    clamp(72px, 8vw, 128px);
+  --container-pad:  clamp(24px, 6vw, 80px);
+  --content-max:    1280px;
+  --card-radius:    20px;
+  --btn-radius:     12px;
+  --tap-min:        48px;
   --safe-bottom:    env(safe-area-inset-bottom, 0px);
 
   /* ── Shadows ─────────────────────────────────────────── */
-  --shadow-xs:  0 1px 2px rgba(15,23,42,0.06);
-  --shadow-sm:  0 2px 8px rgba(15,23,42,0.08);
-  --shadow-md:  0 6px 20px rgba(15,23,42,0.10);
-  --shadow-lg:  0 16px 40px rgba(15,23,42,0.13);
-  --shadow-xl:  0 24px 60px rgba(15,23,42,0.16);
-  --shadow-blue: 0 8px 28px rgba(26,86,219,0.28);
+  --shadow-xs:  0 1px 2px rgba(0,0,0,0.2);
+  --shadow-sm:  0 2px 8px rgba(0,0,0,0.3);
+  --shadow-md:  0 6px 20px rgba(0,0,0,0.4);
+  --shadow-lg:  0 12px 32px rgba(0,0,0,0.5);
+  --shadow-xl:  0 20px 60px rgba(0,0,0,0.6);
+  --shadow-green: 0 8px 28px rgba(29,186,140,0.3);
+  --shadow-gold: 0 8px 28px rgba(214,179,71,0.25);
 
   /* ── Typography ──────────────────────────────────────── */
-  --font-serif:   'Cormorant Garamond', Georgia, serif;
+  --font-serif:   'Playfair Display', 'Cormorant Garamond', Georgia, serif;
   --font-sans:    'Inter', system-ui, -apple-system, sans-serif;
-  --font-display: 'Space Grotesk', var(--font-sans);
+  --font-display: 'Montserrat', var(--font-sans);
 }
 
 @media (max-width: 768px) {

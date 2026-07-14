@@ -7,7 +7,7 @@ import { TESTIMONIALS } from '../../core/data/site-data';
   template: `
     <section id="testimonials" class="testimonials">
       <div class="testimonials__header" data-reveal data-aos="fade-up">
-        <div class="section-label section-label--center">Customer Stories</div>
+          <div class="section-label section-label--center section-label--light">Customer Stories</div>
         <h2 class="section-h2">Voices of <em>Trust</em></h2>
       </div>
 

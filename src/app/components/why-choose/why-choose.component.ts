@@ -7,7 +7,7 @@ import { WHY_CARDS } from '../../core/data/site-data';
   template: `
     <section id="why" class="why section-blue">
       <div class="why__header" data-reveal data-aos="fade-up">
-        <div class="section-label section-label--center">Why Choose Us</div>
+        <div class="section-label section-label--center section-label--light">Why Choose Us</div>
         <h2 class="section-h2">Trusted Medicine<br /><em>Delivery Partner</em></h2>
         <p class="section-body why__desc">
           Why customers trust us for their medicine delivery needs.

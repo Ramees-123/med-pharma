@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
     <section id="about" class="about">
       <div class="about__grid">
         <div>
-          <div class="section-label">About Us</div>
+          <div class="section-label section-label--light">About Us</div>
           <h2 class="section-h2">Trusted Personal<br /><em>Medicine Delivery</em> from India</h2>
           <p class="section-body about__body">
             We are a trusted medicine delivery company based in Kerala, India, committed to providing

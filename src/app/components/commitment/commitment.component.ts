@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
     <section id="commitment" class="commitment">
       <div class="commitment__inner">
         <div class="commitment__header" data-aos="fade-up">
-          <div class="section-label section-label--center">Our Commitment</div>
+          <div class="section-label section-label--center section-label--light">Our Commitment</div>
           <h2 class="section-h2">What We <em>Stand For</em></h2>
           <p class="section-body commitment__desc">
             We are committed to providing genuine medicines with complete legal compliance and professional service.

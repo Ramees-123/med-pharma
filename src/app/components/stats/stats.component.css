@@ -1,0 +1,106 @@
+.stats {
+  background: rgba(255, 255, 255, 0.02);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+.stats::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(29, 186, 140, 0.05) 0%, rgba(214, 179, 71, 0.03) 60%);
+  pointer-events: none;
+}
+
+.stats__inner {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: var(--section-pad) var(--container-pad);
+}
+
+.stats__header {
+  text-align: center;
+  margin-bottom: clamp(32px, 5vw, 48px);
+}
+
+.stats__title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.75rem, 5vw, 3rem);
+  font-weight: 600;
+  color: var(--white);
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+}
+.stats__title em {
+  font-style: italic;
+  color: var(--accent-light);
+}
+
+.stats__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+@media (min-width: 576px) {
+  .stats__grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+}
+
+.stats__item {
+  padding: clamp(20px, 2.5vw, 32px) clamp(16px, 2vw, 24px);
+  text-align: center;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: var(--card-radius);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: var(--shadow-md);
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.stats__item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  border-radius: 2px 2px 0 0;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+@media (min-width: 992px) {
+  .stats__item:hover {
+    box-shadow: var(--shadow-xl);
+    transform: translateY(-6px);
+    border-color: rgba(29, 186, 140, 0.3);
+  }
+  .stats__item:hover::before {
+    opacity: 1;
+  }
+}
+
+.stats__num {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 6vw, 3.2rem);
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1;
+  text-shadow: 0 0 30px rgba(29, 186, 140, 0.5);
+}
+
+.stats__lbl {
+  font-size: clamp(0.6rem, 1.6vw, 0.74rem);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #E2E8F0;
+  margin-top: 10px;
+  line-height: 1.4;
+  font-family: var(--font-display);
+  opacity: 0.9;
+}
+/*# sourceMappingURL=stats.component.css.map */

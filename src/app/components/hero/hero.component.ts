@@ -16,9 +16,9 @@ import { CONTACT } from '../../core/data/site-data';
 
       <div class="hero__inner">
         <div class="hero__left">
-          <div class="hero-eyebrow">
-            <i class="fas fa-shield-alt"></i>
-            Safe • Legal • Affordable
+          <div class="hero-badge">
+            <span class="hero-badge__icon"><i class="fas fa-shield-alt"></i></span>
+            <span class="hero-badge__text">Safe • Legal • Affordable</span>
           </div>
 
           <h1 class="hero-title">
@@ -123,14 +123,36 @@ export class HeroComponent implements AfterViewInit {
   readonly contact = CONTACT;
   readonly quickStats = [
     { value: '3+', label: 'Years Trust' },
-    { value: '100+', label: 'Happy Customers' },
+    { value: '1000+', label: 'Happy Customers' },
     { value: '12+', label: 'Countries' },
   ];
+  
+  private counterAnimated = false;
 
   ngAfterViewInit(): void {
     const hero = this.heroRef()?.nativeElement;
     const bg = this.bgRef()?.nativeElement;
     if (hero) this.anim.heroEntrance(hero);
     if (bg) this.anim.parallaxHero(bg);
+
+    // Animate counters after page loads
+    setTimeout(() => this.animateCounters(hero), 2000);
+  }
+
+  private animateCounters(hero: HTMLElement | undefined): void {
+    if (this.counterAnimated) return;
+    this.counterAnimated = true;
+
+    const statNums = hero?.querySelectorAll('.hero-stat__num');
+    statNums?.forEach((el, i) => {
+      const target = parseInt(this.quickStats[i].value.replace(/\D/g, '')) || 0;
+      const suffix = this.quickStats[i].value.replace(/[\d,]/g, '');
+      if (target > 0) {
+        // Animate counter with stagger after loading screen
+        setTimeout(() => {
+          this.anim.animateCounter(el as HTMLElement, target, suffix);
+        }, i * 200);
+      }
+    });
   }
 }

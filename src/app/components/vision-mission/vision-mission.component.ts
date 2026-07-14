@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   template: `
     <section id="vision" class="vision">
       <div class="vision__header" data-reveal data-aos="fade-up">
-        <div class="section-label section-label--center">What We Manage</div>
+        <div class="section-label section-label--center section-label--light">What We Manage</div>
         <h2 class="section-h2">Complete End-to-End<br /><em>Process Management</em></h2>
       </div>
 

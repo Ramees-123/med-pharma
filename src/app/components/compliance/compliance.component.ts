@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
     <section id="compliance" class="compliance section-blue">
       <div class="compliance__inner">
         <div class="compliance__header" data-aos="fade-up">
-          <div class="section-label section-label--center">Regulatory Compliance</div>
+          <div class="section-label section-label--center section-label--light">Regulatory Compliance</div>
           <h2 class="section-h2">Legal &amp; <em>Regulatory</em> Compliance</h2>
           <p class="section-body compliance__desc">
             We strictly follow the legal requirements of every destination country to ensure safe and legal medicine delivery.

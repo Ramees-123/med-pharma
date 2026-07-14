@@ -6,8 +6,8 @@ import { SERVICES } from '../../core/data/site-data';
   standalone: true,
   template: `
     <section id="services" class="services">
-      <div class="services__header" data-reveal data-aos="fade-up">
-        <div class="section-label section-label--center">Our Services</div>
+        <div class="services__header" data-reveal data-aos="fade-up">
+          <div class="section-label section-label--center section-label--light">Our Services</div>
         <h2 class="section-h2">What We <em>Offer</em></h2>
         <p class="section-body services__desc">
           We supply medicines only for personal medical use and manage the complete legal shipping process.
