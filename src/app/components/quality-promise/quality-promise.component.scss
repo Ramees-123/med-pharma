@@ -149,3 +149,21 @@
     animation: none !important;
   }
 }
+
+@include down(480px) {
+  .quality__inner {
+    padding: 24px 16px;
+    gap: 20px;
+  }
+  .quality__shield {
+    width: 70px;
+    height: 70px;
+    i { font-size: 2rem; }
+  }
+  .quality__shield-ring { display: none; }
+  .quality__badges { gap: 6px; }
+  .quality__badge {
+    padding: 5px 10px;
+    font-size: 0.7rem;
+  }
+}

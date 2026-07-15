@@ -90,3 +90,23 @@
   border: 1px solid rgba(29,186,140,0.2);
   box-shadow: 0 4px 16px rgba(29,186,140,0.15);
 }
+
+@include down(480px) {
+  .commitment__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  
+  .commitment__item {
+    padding: 18px 12px;
+    gap: 10px;
+    
+    span { font-size: 0.72rem; }
+  }
+  
+  .commitment__icon {
+    width: 40px;
+    height: 40px;
+    font-size: 0.95rem;
+  }
+}

@@ -142,3 +142,16 @@
     }
   }
 }
+
+@include down(576px) {
+  .services__grid { gap: 14px; }
+  
+  .service-card {
+    padding: 22px 16px;
+    
+    &__num { font-size: 2.2rem; top: 4px; right: 10px; }
+    &__icon { width: 44px; height: 44px; font-size: 1rem; margin-bottom: 14px; }
+    h3 { font-size: 0.92rem; margin-bottom: 8px; }
+    p { font-size: 0.8rem; }
+  }
+}

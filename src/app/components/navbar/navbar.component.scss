@@ -192,15 +192,20 @@
   position: fixed;
   inset: 0;
   z-index: 799;
-  background: rgba(8, 27, 51, 0.85);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  background: rgba(8, 27, 51, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   display: flex;
   align-items: flex-start;
   justify-content: center;
   padding: 80px var(--container-pad) var(--container-pad);
   overflow-y: auto;
-  animation: fadeIn 0.4s ease;
+  animation: menuFadeIn 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes menuFadeIn {
+  from { opacity: 0; backdrop-filter: blur(0px); -webkit-backdrop-filter: blur(0px); }
+  to   { opacity: 1; backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
 }
 
 .mobile-menu__panel {

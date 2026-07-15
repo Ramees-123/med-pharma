@@ -59,20 +59,6 @@ import { CONTACT } from '../../core/data/site-data';
             </div>
           </div>
 
-          <!-- Quick Links -->
-          <div class="footer__col">
-            <h4 class="footer__col-title">Quick Links</h4>
-            <ul class="footer__col-list">
-              @for (link of quickLinks; track link.href) {
-                <li>
-                  <a [href]="link.href">
-                    <i class="fas fa-chevron-right"></i>{{ link.label }}
-                  </a>
-                </li>
-              }
-            </ul>
-          </div>
-
           <!-- Services -->
           <div class="footer__col">
             <h4 class="footer__col-title">Our Services</h4>
@@ -126,6 +112,20 @@ import { CONTACT } from '../../core/data/site-data';
                   <a [href]="'mailto:' + contact.email">{{ contact.email }}</a>
                 </div>
               </li>
+            </ul>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="footer__col">
+            <h4 class="footer__col-title">Quick Links</h4>
+            <ul class="footer__col-list">
+              @for (link of quickLinks; track link.href) {
+                <li>
+                  <a [href]="link.href">
+                    <i class="fas fa-chevron-right"></i>{{ link.label }}
+                  </a>
+                </li>
+              }
             </ul>
           </div>
 

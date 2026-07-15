@@ -6,6 +6,11 @@
 }
 
 .commitment__inner {
+  max-width: var(--content-max);
+  margin: 0 auto;
+}
+
+.commitment__header {
   max-width: 700px;
   margin: 0 auto clamp(32px, 5vw, 60px);
   text-align: center;
@@ -19,23 +24,23 @@
 .commitment__grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
+  gap: 16px;
 }
 @media (min-width: 480px) {
   .commitment__grid {
-    gap: 12px;
+    gap: 18px;
   }
 }
 @media (min-width: 576px) {
   .commitment__grid {
     grid-template-columns: repeat(3, 1fr);
-    gap: 14px;
+    gap: 20px;
   }
 }
 @media (min-width: 768px) {
   .commitment__grid {
     grid-template-columns: repeat(5, 1fr);
-    gap: 16px;
+    gap: 24px;
   }
 }
 
@@ -43,12 +48,12 @@
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--card-radius);
-  padding: clamp(18px, 2.5vw, 28px) clamp(12px, 1.5vw, 22px);
+  padding: clamp(20px, 2.5vw, 32px) clamp(14px, 1.5vw, 24px);
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: var(--shadow-md);
   backdrop-filter: blur(12px);
@@ -57,7 +62,7 @@
 @media (min-width: 992px) {
   .commitment__item:hover {
     box-shadow: var(--shadow-xl);
-    transform: translateY(-6px);
+    transform: translateY(-8px);
     border-color: rgba(29, 186, 140, 0.3);
     background: rgba(255, 255, 255, 0.06);
   }
@@ -65,23 +70,23 @@
 .commitment__item span {
   font-size: clamp(0.74rem, 1.8vw, 0.86rem);
   font-weight: 500;
-  color: #E2E8F0;
-  line-height: 1.4;
-  opacity: 0.9;
+  color: var(--text-body);
+  line-height: 1.5;
+  opacity: 0.95;
 }
 
 .commitment__icon {
-  width: 48px;
-  height: 48px;
+  width: 52px;
+  height: 52px;
   background: rgba(29, 186, 140, 0.1);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   color: var(--accent);
   flex-shrink: 0;
   border: 1px solid rgba(29, 186, 140, 0.2);
-  box-shadow: 0 4px 16px rgba(29, 186, 140, 0.15);
+  box-shadow: 0 4px 16;
 }
 /*# sourceMappingURL=commitment.component.css.map */

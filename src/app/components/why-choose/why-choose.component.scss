@@ -98,3 +98,11 @@
     opacity: 0.9;
   }
 }
+
+@include down(480px) {
+  .why__grid { gap: 12px; }
+  .why-card { padding: 20px 14px; }
+  .why-card__icon { font-size: 1.2rem; margin-bottom: 12px; }
+  .why-card h3 { font-size: 0.88rem; margin-bottom: 6px; }
+  .why-card p { font-size: 0.78rem; }
+}

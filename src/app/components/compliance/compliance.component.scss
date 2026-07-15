@@ -141,3 +141,11 @@
   margin-bottom: 18px;
   box-shadow: 0 4px 12px rgba(29,186,140,0.15);
 }
+
+@include down(480px) {
+  .compliance__grid { gap: 14px; }
+  .compliance__card { padding: 20px 16px; }
+  .compliance__flag { width: 38px; height: 38px; font-size: 0.95rem; margin-bottom: 14px; }
+  .compliance__card h3 { font-size: 0.88rem; }
+  .compliance__card ul li { font-size: 0.78rem; padding-left: 18px; }
+}

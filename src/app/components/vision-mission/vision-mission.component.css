@@ -103,4 +103,31 @@
   margin-top: 3px;
   flex-shrink: 0;
 }
+
+@media (max-width: 480px) {
+  .vision__grid {
+    gap: 16px;
+  }
+  .vision__card {
+    padding: 22px 16px;
+  }
+  .vision__icon {
+    width: 42px;
+    height: 42px;
+    font-size: 1rem;
+    margin-bottom: 16px;
+  }
+  .vision__list span {
+    font-size: 0.8rem;
+    gap: 10px;
+  }
+  .vision__list span i {
+    font-size: 0.7rem;
+    margin-top: 2px;
+  }
+  .vision__card h3 {
+    font-size: 1rem;
+    margin-bottom: 14px;
+  }
+}
 /*# sourceMappingURL=vision-mission.component.css.map */
