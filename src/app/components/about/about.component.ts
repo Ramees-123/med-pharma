@@ -61,11 +61,10 @@ import { Component } from '@angular/core';
 })
 export class AboutComponent {
   readonly pills = [
-    'Genuine Medicines',
-    'Prescription Verification',
-    'Legal International Shipping',
-    'Complete Documentation',
     'Personal Medical Use Only',
+    'Legal International Shipping',
+    'Affordable & Transparent Pricing',
+    'Safe Temperature-controlled Handling',
     'Responsive Customer Support',
   ];
 
@@ -81,14 +80,14 @@ export class AboutComponent {
       desc: 'Serving India, UAE, Saudi Arabia, Qatar, Oman, Bahrain, UK, USA, Ireland, and Australia.',
     },
     {
-      icon: 'fa-file-signature',
-      title: 'Documentation',
-      desc: 'Professional handling of all paperwork.',
+      icon: 'fa-clock',
+      title: 'Fast Turnaround',
+      desc: 'Quick processing from verification to dispatch.',
     },
     {
-      icon: 'fa-truck-fast',
-      title: 'Door-to-Door',
-      desc: 'Reliable doorstep delivery worldwide.',
+      icon: 'fa-list-check',
+      title: 'End-to-End Management',
+      desc: 'Complete process handled from start to finish.',
     },
   ];
 }

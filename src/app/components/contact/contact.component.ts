@@ -67,7 +67,6 @@ import { CONTACT } from '../../core/data/site-data';
               <p>Contact us for:</p>
               <ul>
                 <li><i class="fas fa-check-circle"></i> Medicine availability</li>
-                <li><i class="fas fa-check-circle"></i> Prescription verification</li>
                 <li><i class="fas fa-check-circle"></i> International shipping</li>
                 <li><i class="fas fa-check-circle"></i> Documentation support</li>
                 <li><i class="fas fa-check-circle"></i> SFDA assistance</li>

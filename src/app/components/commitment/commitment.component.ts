@@ -33,15 +33,13 @@ import { Component } from '@angular/core';
 })
 export class CommitmentComponent {
   readonly commitments = [
-    { icon: 'fa-prescription-bottle', label: 'Genuine Medicines' },
-    { icon: 'fa-gavel', label: 'Legal Compliance' },
-    { icon: 'fa-shield-alt', label: 'Patient Safety' },
-    { icon: 'fa-bolt', label: 'Fast Processing' },
+    { icon: 'fa-shield-alt', label: 'Patient Safety First' },
+    { icon: 'fa-handshake', label: 'Honest & Transparent' },
+    { icon: 'fa-clock', label: 'On-Time Processing' },
+    { icon: 'fa-star', label: 'Quality-focused Service' },
     { icon: 'fa-file-alt', label: 'Professional Documentation' },
     { icon: 'fa-headset', label: 'Reliable Support' },
-    { icon: 'fa-clock', label: 'Timely Delivery' },
-    { icon: 'fa-box', label: 'Secure Packaging' },
-    { icon: 'fa-comments', label: 'Transparent Communication' },
-    { icon: 'fa-smile', label: 'Customer Satisfaction' },
+    { icon: 'fa-comments', label: 'Clear Communication' },
+    { icon: 'fa-user-check', label: 'Customer Satisfaction' },
   ];
 }

@@ -30,13 +30,11 @@ import { Component } from '@angular/core';
 })
 export class QualityPromiseComponent {
   readonly badges = [
-    'Medicine Verification',
     'Expiry Date Checking',
-    'Prescription Validation',
-    'Secure Packaging',
     'Safe Handling',
-    'Accurate Documentation',
     'Reliable Courier Processing',
     'Tracking Support',
+    'Authenticity Verification',
+    'Customs Documentation Support',
   ];
 }

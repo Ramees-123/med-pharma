@@ -5,7 +5,6 @@ import { HeroComponent } from '../../components/hero/hero.component';
 import { AboutComponent } from '../../components/about/about.component';
 import { VisionMissionComponent } from '../../components/vision-mission/vision-mission.component';
 import { ServicesComponent } from '../../components/services/services.component';
-import { ProcessComponent } from '../../components/process/process.component';
 import { ComplianceComponent } from '../../components/compliance/compliance.component';
 import { CommitmentComponent } from '../../components/commitment/commitment.component';
 import { StatsComponent } from '../../components/stats/stats.component';
@@ -28,7 +27,6 @@ import { AnimationService } from '../../core/services/animation.service';
     AboutComponent,
     VisionMissionComponent,
     ServicesComponent,
-    ProcessComponent,
     ComplianceComponent,
     CommitmentComponent,
     StatsComponent,
@@ -48,7 +46,6 @@ import { AnimationService } from '../../core/services/animation.service';
       <app-about />
       <app-vision-mission />
       <app-services />
-      <app-process />
       <app-compliance />
       <app-commitment />
       <app-stats />

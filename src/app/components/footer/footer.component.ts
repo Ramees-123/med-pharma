@@ -172,7 +172,7 @@ export class FooterComponent {
 
   readonly services = [
     { label: 'Personal Medicine Supply',      href: '#personal-medicine-supply' },
-    { label: 'Prescription Arrangement',      href: '#prescription-medicine-arrangement' },
+    { label: 'Medicine Arrangement',          href: '#prescription-medicine-arrangement' },
     { label: 'Ayurvedic Medicine Support',    href: '#ayurvedic-medicine-support' },
     { label: 'International Delivery',        href: '#international-medicine-delivery' },
     { label: 'Documentation & Approvals',     href: '#documentation-approvals' },

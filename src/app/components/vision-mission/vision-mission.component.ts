@@ -37,7 +37,6 @@ import { Component } from '@angular/core';
 })
 export class VisionMissionComponent {
   readonly docServices = [
-    'Prescription Verification',
     'Medicine Availability Check',
     'Regulatory Documentation',
     'Country-specific Approval Process',

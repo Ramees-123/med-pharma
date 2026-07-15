@@ -49,7 +49,7 @@ export const SERVICES: Service[] = [
   {
     num: '02',
     icon: 'fa-file-prescription',
-    title: 'Prescription Medicine Arrangement',
+    title: 'Medicine Arrangement',
     description:
       'We arrange prescription medicines with careful verification, availability checks, and proper documentation.',
     anchorId: 'prescription-medicine-arrangement',
@@ -97,30 +97,24 @@ export const PROCESS_STEPS: ProcessStep[] = [
   },
   {
     step: '02',
-    title: 'Prescription Review',
-    description:
-      'We verify the prescription and confirm medicine availability and legal eligibility for the destination country.',
-  },
-  {
-    step: '03',
     title: 'Documentation Preparation',
     description:
       'We prepare the required documentation, approvals, and country-specific compliance paperwork.',
   },
   {
-    step: '04',
+    step: '03',
     title: 'Country-specific Approval',
     description:
       'We complete the approval process for the destination country, including SFDA or MOH where applicable.',
   },
   {
-    step: '05',
+    step: '04',
     title: 'Secure Dispatch',
     description:
       'Medicines are packed carefully, checked for authenticity and expiry, and dispatched through a trusted courier.',
   },
   {
-    step: '06',
+    step: '05',
     title: 'Doorstep Delivery',
     description:
       'Shipment is delivered to your doorstep with tracking support and complete documentation.',
@@ -129,54 +123,14 @@ export const PROCESS_STEPS: ProcessStep[] = [
 
 export const WHY_CARDS: WhyCard[] = [
   {
-    icon: 'fa-certificate',
-    title: 'Genuine Medicines',
-    description: 'All medicines are sourced from trusted channels and verified before dispatch.',
-  },
-  {
     icon: 'fa-hand-holding-dollar',
     title: 'Affordable Pricing',
     description: 'We offer competitive and transparent pricing for all medicines and services.',
   },
   {
-    icon: 'fa-gavel',
-    title: 'Legal International Shipping',
-    description: 'We ensure full legal compliance with regulations of both India and the destination country.',
-  },
-  {
-    icon: 'fa-box',
-    title: 'Secure Packaging',
-    description: 'Medicines are carefully packed with temperature-conscious handling where required.',
-  },
-  {
-    icon: 'fa-bolt',
-    title: 'Fast Processing',
-    description: 'We process orders efficiently with quick documentation and dispatch handling.',
-  },
-  {
-    icon: 'fa-door-open',
-    title: 'Door-to-Door Delivery',
-    description: 'Complete door-to-door delivery service with shipment tracking support.',
-  },
-  {
-    icon: 'fa-check-circle',
-    title: 'Prescription Verification',
-    description: 'Every prescription is carefully verified before any medicine is dispatched.',
-  },
-  {
-    icon: 'fa-globe',
-    title: 'Country-specific Compliance',
-    description: 'We handle SFDA, MOH, and other country-specific regulatory requirements.',
-  },
-  {
     icon: 'fa-users',
     title: 'Experienced Team',
     description: 'Professional documentation team with experience in international medicine shipping.',
-  },
-  {
-    icon: 'fa-headset',
-    title: 'Responsive Support',
-    description: 'Our customer support team is ready to assist you at every step.',
   },
   {
     icon: 'fa-ship',
